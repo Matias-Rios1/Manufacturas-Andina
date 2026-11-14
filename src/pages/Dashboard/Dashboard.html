@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Supervisión - MANTTO</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <aside>
+        <div class="brand">MANTTO</div>
+        <div class="subtitle">SUPERVISIÓN INDUSTRIAL</div>
+        
+        <div class="workspace-selector">
+            <div style="font-size: 9px; color: #BECBC8;">ESPACIO DE TRABAJO</div>
+            <div style="font-weight: 600; margin-top: 2px;">Planta Norte ▼</div>
+        </div>
+        
+        <div class="subtitle" style="margin-top: 20px;">OPERACIÓN</div>
+        <nav>
+            <a href="#" class="nav-item active">Dashboard</a>
+            <a href="#" class="nav-item">Equipos</a>
+            <a href="#" class="nav-item">Órdenes de trabajo <span class="badge">24</span></a>
+            <a href="#" class="nav-item">Inventario</a>
+            <a href="#" class="nav-item">Códigos QR</a>
+            <a href="#" class="nav-item">Reportes</a>
+        </nav>
+        
+        <div class="subtitle" style="margin-top: 30px; border-top: 1px solid #385057; padding-top: 20px;">ADMINISTRACIÓN</div>
+        <nav style="flex: unset;">
+            <a href="#" class="nav-item">Configuración</a>
+            <a href="#" class="nav-item">Centro de ayuda</a>
+        </nav>
+    </aside>
+    
+    <main>
+        <header>
+            <div style="color: var(--text-gray); font-size: 14px;">Operación / <span style="color: var(--text-dark); font-weight: 600;">Dashboard</span></div>
+            <div class="header-search">
+                <span style="color: var(--text-gray);">🔍</span> 
+                <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+            </div>
+            <div class="header-profile">
+                <div>🔔</div>
+                <div style="border-left: 1px solid var(--border-color); padding-left: 15px;">
+                    <div style="font-weight: 600; font-size: 14px;">María González</div>
+                    <div style="font-size: 11px; color: var(--text-gray);">Supervisora de mantenimiento</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="dashboard-content">
+            <div class="page-header">
+                <div>
+                    <h1>Resumen de operación</h1>
+                    <p>Estado de los equipos y trabajo pendiente en un solo lugar.</p>
+                </div>
+                <div class="filters">
+                    <select><option>Planta Norte</option></select>
+                    <select><option>Hoy · 13 nov 2026</option></select>
+                </div>
+            </div>
+            
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Disponibilidad de equipos</h3>
+                    <div class="kpi-value">90.6 <span style="font-size: 18px; color: var(--text-gray);">%</span></div>
+                    <div class="kpi-desc">116 de 128 equipos operativos</div>
+                    <div style="color: var(--success); font-size: 11px; font-weight: 600; margin-top: 5px;">+2.3 pp vs. mes anterior</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Equipos detenidos</h3>
+                    <div class="kpi-value" style="color: var(--danger);">04</div>
+                    <div class="kpi-desc">8 adicionales en mantenimiento</div>
+                    <div class="kpi-alert">Requieren atención inmediata</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Órdenes abiertas</h3>
+                    <div class="kpi-value">24</div>
+                    <div class="kpi-desc">6 de prioridad alta · 3 vencidas</div>
+                    <div class="kpi-desc" style="margin-top: 5px;">18 correctivas · 6 preventivas</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Cumplimiento preventivo</h3>
+                    <div class="kpi-value">92 <span style="font-size: 18px; color: var(--text-gray);">%</span></div>
+                    <div class="kpi-desc">46 de 50 completadas · Meta: 95%</div>
+                    <div style="width: 100%; height: 5px; background: #E5EAE4; border-radius: 3px; margin-top: 10px;">
+                        <div style="width: 92%; height: 100%; background: var(--primary-dark); border-radius: 3px;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-card">
+                <div class="section-header">
+                    <h2>Órdenes de trabajo <span style="font-size: 12px; background: #E9EEE7; padding: 4px 8px; border-radius: 6px; font-weight: 500; vertical-align: middle;">24 abiertas</span></h2>
+                    <div class="table-controls">
+                        <button class="btn btn-outline">📥 Exportar</button>
+                        <button class="btn btn-primary">➕ Nueva orden</button>
+                    </div>
+                </div>
+                
+                <div style="display: flex; gap: 10px; margin-bottom: 15px; align-items: center;">
+                    <button class="btn" style="background: var(--primary-dark); color: white;">Todas 24</button>
+                    <button class="btn btn-outline" style="border: none; background: var(--bg-light);">Pendientes 16</button>
+                    <button class="btn btn-outline" style="border: none; background: var(--bg-light);">En curso 8</button>
+                    
+                    <div style="margin-left: auto; display: flex; gap: 10px;">
+                        <input type="text" placeholder="Buscar orden o equipo..." style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px;">
+                        <select style="padding: 8px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px; background: white;"><option>Toda prioridad</option></select>
+                        <select style="padding: 8px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px; background: white;"><option>Todo tipo</option></select>
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Orden</th>
+                            <th>Equipo / Ubicación</th>
+                            <th>Prioridad</th>
+                            <th>Estado</th>
+                            <th>Responsable</th>
+                            <th>Vencimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><strong>OT-0248</strong><br><span style="color: var(--text-gray); font-size: 11px;">Correctiva</span></td>
+                            <td><strong>Bomba centrífuga B-04</strong><br><span style="color: var(--text-gray); font-size: 11px;">Línea 02</span></td>
+                            <td><span class="status-badge status-high">Alta</span></td>
+                            <td><span class="status-badge status-pending">Pendiente</span></td>
+                            <td>Carlos Méndez</td>
+                            <td>Hoy, 10:00</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><strong>OT-0249</strong><br><span style="color: var(--text-gray); font-size: 11px;">Preventiva</span></td>
+                            <td><strong>Compresor C-12</strong><br><span style="color: var(--text-gray); font-size: 11px;">Sala de aire</span></td>
+                            <td><span class="status-badge status-medium">Media</span></td>
+                            <td><span class="status-badge" style="background: #E7EDE6; color: #455C4D;">Programada</span></td>
+                            <td>Luis Herrera</td>
+                            <td>Hoy, 11:30</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><strong>OT-0245</strong><br><span style="color: var(--text-gray); font-size: 11px;">Correctiva</span></td>
+                            <td><strong>Motor eléctrico M-08</strong><br><span style="color: var(--text-gray); font-size: 11px;">Línea 01</span></td>
+                            <td><span class="status-badge status-high">Alta</span></td>
+                            <td><span class="status-badge status-progress">En curso</span></td>
+                            <td>Ana Torres</td>
+                            <td><span style="color: var(--danger); font-weight: 600;">12 nov, 16:00 (Vencida)</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="bottom-grid">
+                <div class="section-card">
+                    <div class="section-header">
+                        <div>
+                            <h2>Inventario crítico</h2>
+                            <p style="font-size: 12px; color: var(--text-gray); margin-top: 5px;">3 repuestos bajo mínimo · 248 referencias en almacén</p>
+                        </div>
+                        <button class="btn btn-outline">Gestionar ➔</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Repuesto</th>
+                                <th>Disponible</th>
+                                <th>Mínimo</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rodamiento SKF 6205</strong><br><span style="color: var(--text-gray); font-size: 11px;">REP-0034 · Mecánica</span></td>
+                                <td style="color: var(--warning); font-weight: bold; font-size: 16px;">04</td>
+                                <td>10</td>
+                                <td><span class="status-badge status-pending">Reponer</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sello mecánico 25 mm</strong><br><span style="color: var(--text-gray); font-size: 11px;">REP-0081 · Bombas</span></td>
+                                <td style="color: var(--warning); font-weight: bold; font-size: 16px;">02</td>
+                                <td>06</td>
+                                <td><span class="status-badge status-pending">Reponer</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Correa de transmisión B-42</strong><br><span style="color: var(--text-gray); font-size: 11px;">REP-0116 · Transmisión</span></td>
+                                <td style="color: var(--danger); font-weight: bold; font-size: 16px;">00</td>
+                                <td>04</td>
+                                <td><span class="status-badge status-high">Agotado</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="qr-card">
+                    <h2 style="margin-bottom: 5px;">Códigos QR</h2>
+                    <p style="font-size: 13px; color: #D5DEDA;">Identifica tus activos en terreno, sin escribir.</p>
+                    
+                    <select>
+                        <option>Todos los equipos (128 activos)</option>
+                    </select>
+                    
+                    <div style="font-size: 12px; margin-bottom: 15px; color: #D5DEDA; width: 100%;">
+                        📄 PDF · Etiquetas A6 
+                        <span style="color: var(--accent-lime); float: right; cursor: pointer; font-weight: 600;">Cambiar</span>
+                    </div>
+                    
+                    <button class="btn btn-primary">⬇ Descargar 128 códigos</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

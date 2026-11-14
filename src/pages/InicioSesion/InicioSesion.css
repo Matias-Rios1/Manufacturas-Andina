@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-dark: #142C32;
+    --accent-lime: #D5F66A;
+    --bg-light: #F3F5F2;
+    --text-muted: #53666A;
+    --text-light-muted: #BECBC8;
+    --text-lightest: #D5DEDA;
+    --border-color: #C6D0CB;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 412px;
+    min-height: 940px;
+    background-color: var(--bg-light);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.login-header {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    padding: 15px 24px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.branding .logo {
+    color: var(--accent-lime);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.branding .subtitle {
+    color: var(--text-light-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 4px;
+}
+
+.accent-line {
+    width: 44px;
+    height: 5px;
+    background-color: var(--accent-lime);
+    border-radius: 2px;
+    margin: 24px 0;
+}
+
+.header-text h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.header-text p {
+    color: var(--text-lightest);
+    font-size: 16px;
+}
+
+.login-form-section {
+    padding: 40px 24px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    color: var(--primary-dark);
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    height: 58px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: var(--primary-dark);
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-dark);
+}
+
+.input-group input::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    color: var(--primary-dark);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-bottom: 40px;
+}
+
+.form-actions {
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 60px;
+    background: var(--primary-dark);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    position: relative;
+}
+
+.btn-submit span {
+    margin-right: 40px;
+}
+
+.btn-submit svg {
+    position: absolute;
+    right: 20px;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+}
+
+.secure-access {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.home-indicator {
+    width: 128px;
+    height: 4px;
+    background: var(--primary-dark);
+    border-radius: 2px;
+    margin: 20px auto 10px;
+}

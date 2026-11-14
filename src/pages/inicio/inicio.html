@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANTTO - Inicio</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="status-bar">
+                <span class="time">9:41</span>
+                <span class="network">5G ▰</span>
+            </div>
+            <div class="header-top">
+                <div class="brand-title">MANTTO</div>
+                <button class="btn-notificaciones" aria-label="Notificaciones">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 21H14M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 15 3 17H21C21 15 18 15 18 8Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="header-greeting">
+                <h1>Buen turno, Carlos</h1>
+                <p>Planta Norte · Turno de mañana</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Resumen del turno -->
+            <section class="resumen-turno">
+                <div class="sync-status">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 9L6.75 12L14.25 4.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#37634D"/>
+                    </svg>
+                    <span>Sincronizado hace 1 min</span>
+                </div>
+                <div class="indicadores-card">
+                    <div class="indicador">
+                        <span class="valor valor-normal">05</span>
+                        <span class="etiqueta">Asignadas</span>
+                    </div>
+                    <div class="separador"></div>
+                    <div class="indicador">
+                        <span class="valor valor-urgente">02</span>
+                        <span class="etiqueta">Urgentes</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Acceso QR y Reportes -->
+            <section class="acciones-rapidas">
+                <button class="card-escanear">
+                    <div class="icono-escanear">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 10.6667V4H10.6667M21.3333 4H28V10.6667M4 21.3333V28H10.6667M21.3333 28H28V21.3333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                            <path d="M9.33334 9.33334H13.3333V13.3333H9.33334V9.33334Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                            <path d="M18.6667 9.33334H22.6667V13.3333H18.6667V9.33334Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                            <path d="M9.33334 18.6667H13.3333V22.6667H9.33334V18.6667Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                            <path d="M24 24H25.3333M18.6667 18.6667H22.6667V22.6667H18.6667V18.6667Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                        </svg>
+                    </div>
+                    <div class="escanear-textos">
+                        <h2>Escanear equipo</h2>
+                        <p>Abre su ficha con el código QR</p>
+                    </div>
+                    <svg class="flecha-escanear" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 5.83334L18.6667 14L10.5 22.1667" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                    </svg>
+                </button>
+
+                <button class="card-reportar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 5V12M12 12V19M12 12H5M12 12H19" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                    </svg>
+                    <span>Reportar una falla</span>
+                    <svg class="flecha-reportar" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 5L16 12L9 19" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Órdenes prioritarias -->
+            <section class="ordenes-prioritarias">
+                <div class="ordenes-header">
+                    <h2>Tu próxima intervención</h2>
+                    <a href="#" class="link-ver-todas">Ver todas</a>
+                </div>
+
+                <!-- Orden 1 -->
+                <article class="orden-card card-alta">
+                    <div class="barra-prioridad barra-roja"></div>
+                    <div class="orden-info-top">
+                        <span class="codigo-ot">OT-0248 · CORRECTIVA</span>
+                        <span class="badge badge-rojo">Alta prioridad</span>
+                    </div>
+                    <h3 class="orden-titulo">Bomba centrífuga B-04</h3>
+                    <div class="orden-info-bottom">
+                        <span class="ubicacion-tiempo">Línea 02 · Hoy, 10:00</span>
+                        <svg class="flecha-orden" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.75 3.75L12 9L6.75 14.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                        </svg>
+                    </div>
+                </article>
+
+                <!-- Orden 2 -->
+                <article class="orden-card card-programada">
+                    <div class="barra-prioridad barra-verde"></div>
+                    <div class="orden-info-top">
+                        <span class="codigo-ot">OT-0249 · PREVENTIVA</span>
+                        <span class="badge badge-verde">Programada</span>
+                    </div>
+                    <h3 class="orden-titulo">Compresor C-12</h3>
+                    <div class="orden-info-bottom">
+                        <span class="ubicacion-tiempo">Sala de aire · Hoy, 11:30</span>
+                        <svg class="flecha-orden" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.75 3.75L12 9L6.75 14.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                        </svg>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <!-- Navegación -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item activo">
+                <div class="nav-bg"></div>
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.875 9.58333L11.5 2.875L20.125 9.58333V20.125H14.375V13.4167H8.625V20.125H2.875V9.58333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                </svg>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.70832 3.83334H16.2917C17.3502 3.83334 18.2083 4.69146 18.2083 5.75001V18.2083C18.2083 19.2669 17.3502 20.125 16.2917 20.125H6.70832C5.64978 20.125 4.79166 19.2669 4.79166 18.2083V5.75001C4.79166 4.69146 5.64978 3.83334 6.70832 3.83334Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M8.625 3.83332V1.91666H14.375V3.83332M8.625 9.58332H14.375M8.625 14.375H14.375" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                </svg>
+                <span>Órdenes</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.875 7.66667V2.875H7.66667M15.3333 2.875H20.125V7.66667M2.875 15.3333V20.125H7.66667M15.3333 20.125H20.125V15.3333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M6.70831 6.70834H9.58331V9.58334H6.70831V6.70834Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M13.4167 6.70834H16.2917V9.58334H13.4167V6.70834Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M6.70831 13.4167H9.58331V16.2917H6.70831V13.4167Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M17.25 17.25H18.2084M13.4167 13.4167H16.2917V16.2917H13.4167V13.4167Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                </svg>
+                <span>Escanear</span>
+            </a>
+            <a href="#" class="nav-item">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.3334 6.70833C15.3334 8.82542 13.6171 10.5417 11.5 10.5417C9.38293 10.5417 7.66669 8.82542 7.66669 6.70833C7.66669 4.59124 9.38293 2.875 11.5 2.875C13.6171 2.875 15.3334 4.59124 15.3334 6.70833Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M3.83331 20.125V18.2083C3.83331 16.175 4.64105 14.2249 6.07883 12.7872C7.51661 11.3494 9.46665 10.5417 11.5 10.5417C13.5333 10.5417 15.4834 11.3494 16.9211 12.7872C18.3589 14.2249 19.1666 16.175 19.1666 18.2083V20.125" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                </svg>
+                <span>Cuenta</span>
+            </a>
+        </nav>
+        <div class="home-indicator"></div>
+    </div>
+</body>
+</html>
