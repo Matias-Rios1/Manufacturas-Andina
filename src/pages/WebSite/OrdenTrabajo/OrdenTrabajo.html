@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Órdenes de Trabajo - MANTTO</title>
+    <link rel="stylesheet" href="OrdenTrabajo.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <aside class="sidebar">
+            <div class="brand">MANTTO</div>
+            <div class="sidebar-section">SUPERVISIÓN INDUSTRIAL</div>
+            <div class="workspace-selector">
+                <span>ESPACIO DE TRABAJO</span>
+                <strong>Planta Norte</strong>
+            </div>
+            <div class="sidebar-section">OPERACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Equipos</a>
+                <a href="#" class="nav-item active">Órdenes de trabajo <span class="badge">24</span></a>
+                <a href="#" class="nav-item">Inventario</a>
+                <a href="#" class="nav-item">Códigos QR</a>
+                <a href="#" class="nav-item">Reportes</a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-section">ADMINISTRACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Configuración</a>
+                <a href="#" class="nav-item">Centro de ayuda</a>
+            </nav>
+            <div class="connection-status">
+                <strong>Sistema conectado</strong>
+                <span>Última sincronización · 09:41</span>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <header class="topbar">
+                <div class="breadcrumb">Operación / <strong>Historial de órdenes</strong></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+                </div>
+                <div class="user-profile">
+                    <div class="notifications"><span class="indicator"></span>🔔</div>
+                    <div class="user-info">
+                        <strong>María González</strong>
+                        <span>Supervisora de mantenimiento</span>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="content-area">
+                <header class="section-header">
+                    <div>
+                        <h1>Historial de órdenes de trabajo</h1>
+                        <p>Estado de los equipos y trabajo pendiente en un solo lugar.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline">Exportar</button>
+                        <button class="btn btn-primary">Nueva orden</button>
+                    </div>
+                </header>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h3>Órdenes del período</h3>
+                        <div class="kpi-value">128</div>
+                        <p>116 de 128 equipos operativos</p>
+                        <small>24 abiertas · 104 finalizadas</small>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Órdenes completadas</h3>
+                        <div class="kpi-value">104</div>
+                        <p>81,3 % del total del período</p>
+                        <small>Incluye correctivas y preventivas</small>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Tiempo medio de resolución</h3>
+                        <div class="kpi-value">4,2 h</div>
+                        <p>Órdenes correctivas cerradas</p>
+                        <small>−18 % vs. período anterior</small>
+                    </div>
+                    <div class="kpi-card">
+                        <h3>Dentro del plazo</h3>
+                        <div class="kpi-value">94 %</div>
+                        <p>98 de 104 órdenes completadas</p>
+                        <small>Meta de cumplimiento: 95 %</small>
+                    </div>
+                </div>
+                
+                <div class="data-table-container">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label>Período</label>
+                            <select><option>01 nov – 13 nov 2026</option></select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Estado</label>
+                            <select><option>Todos los estados</option></select>
+                        </div>
+                        <div class="filter-group">
+                            <label>Técnico responsable</label>
+                            <select><option>Todos los técnicos</option></select>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-dark">Aplicar filtros</button>
+                            <button class="btn btn-link">Restablecer</button>
+                        </div>
+                    </div>
+                    
+                    <div class="table-header">
+                        <h2>Registro de órdenes</h2>
+                        <span class="results-count">128 resultados</span>
+                        <input type="text" placeholder="Buscar por orden o equipo..." class="table-search">
+                    </div>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ORDEN / TIPO</th>
+                                <th>EQUIPO / UBICACIÓN</th>
+                                <th>TÉCNICO</th>
+                                <th>FECHA DE APERTURA</th>
+                                <th>RESOLUCIÓN</th>
+                                <th>ESTADO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>OT-0247</strong><br><small>Correctiva</small></td>
+                                <td><strong>Compresor C-11</strong><br><small>Sala de aire</small></td>
+                                <td>Ana Torres</td>
+                                <td>13 nov 2026 · 07:30</td>
+                                <td>3 h 40 min</td>
+                                <td><span class="status completed">Completada</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OT-0248</strong><br><small>Correctiva</small></td>
+                                <td><strong>Bomba centrífuga B-04</strong><br><small>Línea 02</small></td>
+                                <td>Carlos Méndez</td>
+                                <td>13 nov 2026 · 09:10</td>
+                                <td>En espera</td>
+                                <td><span class="status pending">Pendiente</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OT-0249</strong><br><small>Preventiva</small></td>
+                                <td><strong>Compresor C-12</strong><br><small>Sala de aire</small></td>
+                                <td>Luis Herrera</td>
+                                <td>13 nov 2026 · 09:25</td>
+                                <td>Sin iniciar</td>
+                                <td><span class="status programmed">Programada</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OT-0246</strong><br><small>Correctiva</small></td>
+                                <td><strong>Motor eléctrico M-08</strong><br><small>Línea 01</small></td>
+                                <td>Ana Torres</td>
+                                <td>12 nov 2026 · 14:20</td>
+                                <td>En ejecución</td>
+                                <td><span class="status in-progress">En curso</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>OT-0245</strong><br><small>Preventiva</small></td>
+                                <td><strong>Banda transportadora T-02</strong><br><small>Empaque</small></td>
+                                <td>Pedro Rojas</td>
+                                <td>12 nov 2026 · 08:00</td>
+                                <td>2 h 15 min</td>
+                                <td><span class="status completed">Completada</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - MANTTO</title>
+    <link rel="stylesheet" href="Inventario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Navegación Lateral -->
+        <aside class="sidebar">
+            <div class="brand">MANTTO</div>
+            <div class="sidebar-section">SUPERVISIÓN INDUSTRIAL</div>
+            <div class="workspace-selector">
+                <span class="workspace-label">ESPACIO DE TRABAJO</span>
+                <select class="workspace-select">
+                    <option>Planta Norte</option>
+                </select>
+            </div>
+            
+            <div class="sidebar-section">OPERACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Equipos</a>
+                <a href="#" class="nav-item">
+                    Órdenes de trabajo
+                    <span class="badge">24</span>
+                </a>
+                <a href="#" class="nav-item active">Inventario</a>
+                <a href="#" class="nav-item">Códigos QR</a>
+                <a href="#" class="nav-item">Reportes</a>
+            </nav>
+            
+            <hr class="sidebar-divider">
+            
+            <div class="sidebar-section">ADMINISTRACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Configuración</a>
+                <a href="#" class="nav-item">Centro de ayuda</a>
+            </nav>
+            
+            <div class="connection-status">
+                <div class="status-indicator">✅ Sistema conectado</div>
+                <div class="status-time">Última sincronización · 09:41</div>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Barra Superior -->
+            <header class="topbar">
+                <div class="breadcrumbs">Operación / <strong>Inventario</strong></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn">🔔</button>
+                    <div class="user-info">
+                        <span class="user-name">María González</span>
+                        <span class="user-role">Supervisora de mantenimiento</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <!-- Cabecera de Página -->
+                <div class="page-header">
+                    <div>
+                        <h1>Gestión de inventario</h1>
+                        <p>Controla repuestos, equipos y niveles de stock de Planta Norte.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-outline">Exportar</button>
+                        <button class="btn-primary">Agregar artículo</button>
+                    </div>
+                </div>
+
+                <!-- Indicadores (KPIs) -->
+                <section class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-title">Artículos registrados</div>
+                        <div class="kpi-value">248</div>
+                        <div class="kpi-desc">186 repuestos · 62 equipos</div>
+                        <div class="kpi-trend">Catálogo de Planta Norte</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Bajo stock mínimo</div>
+                        <div class="kpi-value">03</div>
+                        <div class="kpi-desc">Requieren reposición</div>
+                        <div class="kpi-trend">Prioriza los repuestos críticos</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Sin existencias</div>
+                        <div class="kpi-value text-danger">01</div>
+                        <div class="kpi-desc">Correa de transmisión B-42</div>
+                        <div class="kpi-trend">Requiere atención inmediata</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Valor del inventario</div>
+                        <div class="kpi-value">$ 48.250</div>
+                        <div class="kpi-desc">Valorización al costo de compra</div>
+                        <div class="kpi-trend">Actualizado · 13 nov 2026</div>
+                    </div>
+                </section>
+
+                <!-- Área de Inventario y Edición -->
+                <section class="inventory-section">
+                    <!-- Contenedor de Tabla -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h2>Repuestos y equipos</h2>
+                            <span class="item-count">248 artículos</span>
+                        </div>
+                        <div class="table-filters">
+                            <div class="filter-tabs">
+                                <button class="tab active">Todos 248</button>
+                                <button class="tab">Bajo stock 3</button>
+                                <button class="tab">Sin stock 1</button>
+                            </div>
+                            <div class="filter-controls">
+                                <input type="text" placeholder="Buscar por nombre o código…" class="search-input">
+                                <select class="filter-select"><option>Todas las categorías</option></select>
+                                <select class="filter-select"><option>Todo el almacén</option></select>
+                            </div>
+                        </div>
+                        <table class="inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>ARTÍCULO</th>
+                                    <th>TIPO</th>
+                                    <th>STOCK</th>
+                                    <th>MÍN.</th>
+                                    <th>UBICACIÓN</th>
+                                    <th>ESTADO</th>
+                                    <th>ACCIÓN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active-row">
+                                    <td>
+                                        <strong>Rodamiento SKF 6205</strong><br>
+                                        <span class="text-muted">REP-0034</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td class="text-warning"><strong>04</strong></td>
+                                    <td>10</td>
+                                    <td>Almacén A-02</td>
+                                    <td><span class="badge badge-warning">Reponer</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Correa de transmisión B-42</strong><br>
+                                        <span class="text-muted">REP-0109</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td class="text-danger"><strong>00</strong></td>
+                                    <td>06</td>
+                                    <td>Almacén B-01</td>
+                                    <td><span class="badge badge-danger">Agotado</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Filtro de aire industrial</strong><br>
+                                        <span class="text-muted">REP-0142</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td><strong>24</strong></td>
+                                    <td>10</td>
+                                    <td>Almacén A-03</td>
+                                    <td><span class="badge badge-success">Disponible</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <span>Mostrando 1–3 de 248 artículos</span>
+                            <div class="page-controls">
+                                <button class="btn-page">◀</button>
+                                <button class="btn-page active">1</button>
+                                <button class="btn-page">▶</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Edición Lateral -->
+                    <aside class="edit-panel">
+                        <h2>Editar artículo</h2>
+                        <p class="text-muted">REP-0034 · Repuesto <span class="badge badge-warning">Reponer</span></p>
+                        <hr class="panel-divider">
+                        <form class="edit-form">
+                            <div class="form-group">
+                                <label>Nombre del artículo</label>
+                                <input type="text" value="Rodamiento SKF 6205">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Código</label>
+                                    <input type="text" value="REP-0034">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tipo</label>
+                                    <select><option>Repuesto</option></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Categoría</label>
+                                <select><option>Rodamientos</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Ubicación</label>
+                                <select><option>Almacén A-02</option></select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Stock disponible</label>
+                                    <input type="number" value="4">
+                                </div>
+                                <div class="form-group">
+                                    <label>Stock mínimo</label>
+                                    <input type="number" value="10">
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-warning">
+                                <strong>Stock por debajo del mínimo</strong><br>
+                                Faltan 6 unidades para alcanzar el mínimo.
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p class="text-muted">Último cambio · Hoy, 09:25 por María González</p>
+                                <div class="footer-actions">
+                                    <button type="button" class="btn-outline">Cancelar</button>
+                                    <button type="submit" class="btn-primary">Guardar cambios</button>
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

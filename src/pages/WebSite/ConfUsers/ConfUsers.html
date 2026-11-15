@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Usuarios - MANTTO</title>
+    <link rel="stylesheet" href="ConfUsers.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h1>MANTTO</h1>
+            <span class="subtitle">SUPERVISIÓN INDUSTRIAL</span>
+        </div>
+        <div class="workspace-selector">
+            <span class="label">ESPACIO DE TRABAJO</span>
+            <select class="select-native">
+                <option value="planta-norte">Planta Norte</option>
+            </select>
+        </div>
+        
+        <div class="menu-group">
+            <span class="menu-title">OPERACIÓN</span>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Equipos</a>
+                <a href="#" class="nav-item">Órdenes de trabajo <span class="badge">24</span></a>
+                <a href="#" class="nav-item">Inventario</a>
+                <a href="#" class="nav-item">Códigos QR</a>
+                <a href="#" class="nav-item">Reportes</a>
+            </nav>
+        </div>
+        
+        <hr class="menu-divider">
+        
+        <div class="menu-group">
+            <span class="menu-title">ADMINISTRACIÓN</span>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">Configuración</a>
+                <a href="#" class="nav-item">Centro de ayuda</a>
+            </nav>
+        </div>
+        
+        <div class="connection-status">
+            <div class="status-icon success"></div>
+            <div class="status-text">
+                <span class="status-title">Sistema conectado</span>
+                <span class="status-time">Última sincronización · 09:41</span>
+            </div>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="breadcrumb">Administración / <strong>Usuarios y permisos</strong></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+            </div>
+            <div class="user-actions">
+                <button class="notification-btn" aria-label="Notificaciones">
+                    <span class="indicator"></span>
+                </button>
+                <div class="divider-vertical"></div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <span class="user-name">María González</span>
+                        <span class="user-role">Supervisora de mantenimiento</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="page-header">
+                <div class="header-text">
+                    <h2>Configuración de usuarios</h2>
+                    <p>Administra accesos, roles y permisos del equipo de mantenimiento.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline">Exportar</button>
+                    <button class="btn btn-primary">Invitar usuario</button>
+                </div>
+            </div>
+
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <h3 class="card-title">Usuarios registrados</h3>
+                    <div class="card-value">32</div>
+                    <p class="card-desc">Personal de Planta Norte</p>
+                    <span class="card-subtext">28 activos · 2 invitados · 2 inactivos</span>
+                </div>
+                <div class="metric-card">
+                    <h3 class="card-title">Técnicos</h3>
+                    <div class="card-value">18</div>
+                    <p class="card-desc">Ejecución de mantenimiento</p>
+                    <span class="card-subtext">17 activos · 1 invitación pendiente</span>
+                </div>
+                <div class="metric-card">
+                    <h3 class="card-title">Supervisores</h3>
+                    <div class="card-value">04</div>
+                    <p class="card-desc">Coordinación y aprobación</p>
+                    <span class="card-subtext">4 usuarios activos</span>
+                </div>
+                <div class="metric-card">
+                    <h3 class="card-title">Operarios</h3>
+                    <div class="card-value">10</div>
+                    <p class="card-desc">Reporte y seguimiento de fallas</p>
+                    <span class="card-subtext">7 activos · 1 invitado · 2 inactivos</span>
+                </div>
+            </section>
+
+            <section class="panels-grid">
+                <div class="panel users-directory">
+                    <div class="panel-header">
+                        <h3>Usuarios del espacio</h3>
+                        <span class="user-count">32 usuarios</span>
+                    </div>
+                    <div class="panel-filters">
+                        <input type="text" placeholder="Buscar por nombre o correo…" class="search-input">
+                        <select class="role-select">
+                            <option value="todos">Todos los roles</option>
+                        </select>
+                    </div>
+                    <div class="status-tabs">
+                        <button class="tab active">Todos 32</button>
+                        <button class="tab">Activos 28</button>
+                        <button class="tab">Invitados 2</button>
+                        <button class="tab">Inactivos 2</button>
+                    </div>
+                    <div class="table-container">
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>USUARIO</th>
+                                    <th>ROL</th>
+                                    <th>ESTADO</th>
+                                    <th>ACCIÓN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <span class="name">Carlos Méndez</span>
+                                            <span class="email">carlos.mendez@planta.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Técnico</td>
+                                    <td><span class="status-badge active">Activo</span></td>
+                                    <td><button class="btn-text">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <span class="name">Ana Torres</span>
+                                            <span class="email">ana.torres@planta.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Técnico</td>
+                                    <td><span class="status-badge active">Activo</span></td>
+                                    <td><button class="btn-text">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <span class="name">Luis Herrera</span>
+                                            <span class="email">luis.herrera@planta.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Técnico</td>
+                                    <td><span class="status-badge active">Activo</span></td>
+                                    <td><button class="btn-text">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <span class="name">Elena Vargas</span>
+                                            <span class="email">elena.vargas@planta.com</span>
+                                        </div>
+                                    </td>
+                                    <td>Operaria</td>
+                                    <td><span class="status-badge pending">Invitada</span></td>
+                                    <td><button class="btn-text">Editar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination">
+                        <span class="page-info">Mostrando 1–7 de 32 usuarios</span>
+                        <div class="page-controls">
+                            <button class="btn-icon">&lt;</button>
+                            <button class="btn-icon active">1</button>
+                            <button class="btn-icon">&gt;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel roles-management">
+                    <div class="panel-header">
+                        <h3>Roles y permisos</h3>
+                        <p>Define qué puede hacer cada perfil.</p>
+                    </div>
+                    <div class="role-tabs">
+                        <button class="tab active">Técnicos</button>
+                        <button class="tab">Supervisores</button>
+                        <button class="tab">Operarios</button>
+                    </div>
+                    <div class="role-details">
+                        <h4>Técnico</h4>
+                        <p>18 usuarios · Solo órdenes y equipos asignados.</p>
+                    </div>
+                    <div class="permissions-list">
+                        <div class="permission-header">
+                            <span>PERMISO</span>
+                            <span>ACCESO</span>
+                        </div>
+                        <div class="permission-item">
+                            <span>Reportar fallas</span>
+                            <input type="checkbox" checked class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Ver órdenes asignadas</span>
+                            <input type="checkbox" checked class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Actualizar intervenciones</span>
+                            <input type="checkbox" checked class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Solicitar repuestos</span>
+                            <input type="checkbox" checked class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Aprobar cierres de órdenes</span>
+                            <input type="checkbox" class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Administrar usuarios</span>
+                            <input type="checkbox" class="toggle">
+                        </div>
+                        <div class="permission-item">
+                            <span>Exportar reportes globales</span>
+                            <input type="checkbox" class="toggle">
+                        </div>
+                    </div>
+                    <div class="changes-alert">
+                        <p class="alert-title">Los cambios se aplicarán a los 18 técnicos.</p>
+                        <p class="alert-desc">No modifican los permisos de otros roles.</p>
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-outline">Descartar</button>
+                        <button class="btn btn-primary">Guardar permisos</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
