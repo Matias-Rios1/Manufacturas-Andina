@@ -1,459 +1,247 @@
-<div data-layer="06 · Gestión de inventario" class="GestiNDeInventario" style="width: 1600px; height: 1152px; background: #F3F5F2; overflow: hidden; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-  <div data-layer="Navegación lateral" class="NavegaciNLateral" style="width: 232px; align-self: stretch; position: relative; background: #142C32; overflow: hidden">
-    <div data-layer="MANTTO" class="Mantto" style="left: 24px; top: 30px; position: absolute; color: #D5F66A; font-size: 25px; font-family: Inter; font-weight: 700; line-height: 35px; word-wrap: break-word">MANTTO</div>
-    <div data-layer="SUPERVISIÓN INDUSTRIAL" class="SupervisiNIndustrial" style="left: 24px; top: 68px; position: absolute; color: #BECBC8; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">SUPERVISIÓN INDUSTRIAL</div>
-    <div data-layer="Selector de planta" class="SelectorDePlanta" style="width: 200px; height: 60px; left: 16px; top: 116px; position: absolute; background: #294349; overflow: hidden; border-radius: 10px">
-      <div data-layer="ESPACIO DE TRABAJO" class="EspacioDeTrabajo" style="left: 14px; top: 10px; position: absolute; color: #BECBC8; font-size: 9px; font-family: Inter; font-weight: 600; line-height: 12.60px; word-wrap: break-word">ESPACIO DE TRABAJO</div>
-      <div data-layer="Planta Norte" class="PlantaNorte" style="left: 14px; top: 29px; position: absolute; color: white; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">Planta Norte</div>
-      <div data-svg-wrapper data-layer="down" class="Down" style="left: 166px; top: 27px; position: absolute">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="white"/>
-        </svg>
-      </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario - MANTTO</title>
+    <link rel="stylesheet" href="Inventario.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Navegación Lateral -->
+        <aside class="sidebar">
+            <div class="brand">MANTTO</div>
+            <div class="sidebar-section">SUPERVISIÓN INDUSTRIAL</div>
+            <div class="workspace-selector">
+                <span class="workspace-label">ESPACIO DE TRABAJO</span>
+                <select class="workspace-select">
+                    <option>Planta Norte</option>
+                </select>
+            </div>
+            
+            <div class="sidebar-section">OPERACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Dashboard</a>
+                <a href="#" class="nav-item">Equipos</a>
+                <a href="#" class="nav-item">
+                    Órdenes de trabajo
+                    <span class="badge">24</span>
+                </a>
+                <a href="#" class="nav-item active">Inventario</a>
+                <a href="#" class="nav-item">Códigos QR</a>
+                <a href="#" class="nav-item">Reportes</a>
+            </nav>
+            
+            <hr class="sidebar-divider">
+            
+            <div class="sidebar-section">ADMINISTRACIÓN</div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item">Configuración</a>
+                <a href="#" class="nav-item">Centro de ayuda</a>
+            </nav>
+            
+            <div class="connection-status">
+                <div class="status-indicator">✅ Sistema conectado</div>
+                <div class="status-time">Última sincronización · 09:41</div>
+            </div>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Barra Superior -->
+            <header class="topbar">
+                <div class="breadcrumbs">Operación / <strong>Inventario</strong></div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+                </div>
+                <div class="user-profile">
+                    <button class="notification-btn">🔔</button>
+                    <div class="user-info">
+                        <span class="user-name">María González</span>
+                        <span class="user-role">Supervisora de mantenimiento</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="page-content">
+                <!-- Cabecera de Página -->
+                <div class="page-header">
+                    <div>
+                        <h1>Gestión de inventario</h1>
+                        <p>Controla repuestos, equipos y niveles de stock de Planta Norte.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn-outline">Exportar</button>
+                        <button class="btn-primary">Agregar artículo</button>
+                    </div>
+                </div>
+
+                <!-- Indicadores (KPIs) -->
+                <section class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-title">Artículos registrados</div>
+                        <div class="kpi-value">248</div>
+                        <div class="kpi-desc">186 repuestos · 62 equipos</div>
+                        <div class="kpi-trend">Catálogo de Planta Norte</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Bajo stock mínimo</div>
+                        <div class="kpi-value">03</div>
+                        <div class="kpi-desc">Requieren reposición</div>
+                        <div class="kpi-trend">Prioriza los repuestos críticos</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Sin existencias</div>
+                        <div class="kpi-value text-danger">01</div>
+                        <div class="kpi-desc">Correa de transmisión B-42</div>
+                        <div class="kpi-trend">Requiere atención inmediata</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-title">Valor del inventario</div>
+                        <div class="kpi-value">$ 48.250</div>
+                        <div class="kpi-desc">Valorización al costo de compra</div>
+                        <div class="kpi-trend">Actualizado · 13 nov 2026</div>
+                    </div>
+                </section>
+
+                <!-- Área de Inventario y Edición -->
+                <section class="inventory-section">
+                    <!-- Contenedor de Tabla -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h2>Repuestos y equipos</h2>
+                            <span class="item-count">248 artículos</span>
+                        </div>
+                        <div class="table-filters">
+                            <div class="filter-tabs">
+                                <button class="tab active">Todos 248</button>
+                                <button class="tab">Bajo stock 3</button>
+                                <button class="tab">Sin stock 1</button>
+                            </div>
+                            <div class="filter-controls">
+                                <input type="text" placeholder="Buscar por nombre o código…" class="search-input">
+                                <select class="filter-select"><option>Todas las categorías</option></select>
+                                <select class="filter-select"><option>Todo el almacén</option></select>
+                            </div>
+                        </div>
+                        <table class="inventory-table">
+                            <thead>
+                                <tr>
+                                    <th>ARTÍCULO</th>
+                                    <th>TIPO</th>
+                                    <th>STOCK</th>
+                                    <th>MÍN.</th>
+                                    <th>UBICACIÓN</th>
+                                    <th>ESTADO</th>
+                                    <th>ACCIÓN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active-row">
+                                    <td>
+                                        <strong>Rodamiento SKF 6205</strong><br>
+                                        <span class="text-muted">REP-0034</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td class="text-warning"><strong>04</strong></td>
+                                    <td>10</td>
+                                    <td>Almacén A-02</td>
+                                    <td><span class="badge badge-warning">Reponer</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Correa de transmisión B-42</strong><br>
+                                        <span class="text-muted">REP-0109</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td class="text-danger"><strong>00</strong></td>
+                                    <td>06</td>
+                                    <td>Almacén B-01</td>
+                                    <td><span class="badge badge-danger">Agotado</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Filtro de aire industrial</strong><br>
+                                        <span class="text-muted">REP-0142</span>
+                                    </td>
+                                    <td>Repuesto</td>
+                                    <td><strong>24</strong></td>
+                                    <td>10</td>
+                                    <td>Almacén A-03</td>
+                                    <td><span class="badge badge-success">Disponible</span></td>
+                                    <td><button class="btn-link">Editar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <span>Mostrando 1–3 de 248 artículos</span>
+                            <div class="page-controls">
+                                <button class="btn-page">◀</button>
+                                <button class="btn-page active">1</button>
+                                <button class="btn-page">▶</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Panel de Edición Lateral -->
+                    <aside class="edit-panel">
+                        <h2>Editar artículo</h2>
+                        <p class="text-muted">REP-0034 · Repuesto <span class="badge badge-warning">Reponer</span></p>
+                        <hr class="panel-divider">
+                        <form class="edit-form">
+                            <div class="form-group">
+                                <label>Nombre del artículo</label>
+                                <input type="text" value="Rodamiento SKF 6205">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Código</label>
+                                    <input type="text" value="REP-0034">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tipo</label>
+                                    <select><option>Repuesto</option></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Categoría</label>
+                                <select><option>Rodamientos</option></select>
+                            </div>
+                            <div class="form-group">
+                                <label>Ubicación</label>
+                                <select><option>Almacén A-02</option></select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Stock disponible</label>
+                                    <input type="number" value="4">
+                                </div>
+                                <div class="form-group">
+                                    <label>Stock mínimo</label>
+                                    <input type="number" value="10">
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-warning">
+                                <strong>Stock por debajo del mínimo</strong><br>
+                                Faltan 6 unidades para alcanzar el mínimo.
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p class="text-muted">Último cambio · Hoy, 09:25 por María González</p>
+                                <div class="footer-actions">
+                                    <button type="button" class="btn-outline">Cancelar</button>
+                                    <button type="submit" class="btn-primary">Guardar cambios</button>
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                </section>
+            </div>
+        </main>
     </div>
-    <div data-layer="OPERACIÓN" class="OperaciN" style="left: 24px; top: 210px; position: absolute; color: #BECBC8; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">OPERACIÓN</div>
-    <div data-layer="Menú Dashboard" class="MenDashboard" style="width: 208px; height: 44px; left: 12px; top: 238px; position: absolute; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="grid" class="Grid" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.33333 2.5H7.5C7.96024 2.5 8.33333 2.8731 8.33333 3.33333V7.5C8.33333 7.96024 7.96024 8.33333 7.5 8.33333H3.33333C2.8731 8.33333 2.5 7.96024 2.5 7.5V3.33333C2.5 2.8731 2.8731 2.5 3.33333 2.5Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M12.5001 2.5H16.6667C17.127 2.5 17.5001 2.8731 17.5001 3.33333V7.5C17.5001 7.96024 17.127 8.33333 16.6667 8.33333H12.5001C12.0398 8.33333 11.6667 7.96024 11.6667 7.5V3.33333C11.6667 2.8731 12.0398 2.5 12.5001 2.5Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M3.33333 11.6667H7.5C7.96024 11.6667 8.33333 12.0398 8.33333 12.5V16.6667C8.33333 17.1269 7.96024 17.5 7.5 17.5H3.33333C2.8731 17.5 2.5 17.1269 2.5 16.6667V12.5C2.5 12.0398 2.8731 11.6667 3.33333 11.6667Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M12.5001 11.6667H16.6667C17.127 11.6667 17.5001 12.0398 17.5001 12.5V16.6667C17.5001 17.1269 17.127 17.5 16.6667 17.5H12.5001C12.0398 17.5 11.6667 17.1269 11.6667 16.6667V12.5C11.6667 12.0398 12.0398 11.6667 12.5001 11.6667Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        </svg>
-      </div>
-      <div data-layer="Dashboard" class="Dashboard" style="left: 44px; top: 12px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Dashboard</div>
-    </div>
-    <div data-layer="Menú Equipos" class="MenEquipos" style="width: 208px; height: 44px; left: 12px; top: 290px; position: absolute; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="tool" class="Tool" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_27_161)">
-        <path d="M17.5 3.33333C17.9456 4.26635 18.091 5.31458 17.9162 6.33366C17.7413 7.35274 17.2548 8.29256 16.5237 9.02369C15.7926 9.75481 14.8528 10.2413 13.8337 10.4161C12.8146 10.591 11.7664 10.4456 10.8334 10L4.16669 16.6667C3.83517 16.9982 3.38553 17.1844 2.91669 17.1844C2.44785 17.1844 1.99821 16.9982 1.66669 16.6667C1.33517 16.3351 1.14893 15.8855 1.14893 15.4167C1.14893 14.9478 1.33517 14.4982 1.66669 14.1667L8.33336 7.5C7.88775 6.56697 7.74236 5.51875 7.91721 4.49966C8.09206 3.48058 8.57854 2.54077 9.30967 1.80964C10.0408 1.07851 10.9806 0.592027 11.9997 0.417181C13.0188 0.242334 14.067 0.387723 15 0.833329L11.6667 4.16666L15 7.5L18.3334 4.16666L17.5 3.33333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_27_161">
-        <rect width="20" height="20" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
-      </div>
-      <div data-layer="Equipos" class="Equipos" style="left: 44px; top: 12px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Equipos</div>
-    </div>
-    <div data-layer="Menú Órdenes de trabajo" class="MenRdenesDeTrabajo" style="width: 208px; height: 44px; left: 12px; top: 342px; position: absolute; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="list" class="List" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5.83341 3.33334H14.1667C15.0872 3.33334 15.8334 4.07953 15.8334 5V15.8333C15.8334 16.7538 15.0872 17.5 14.1667 17.5H5.83341C4.91294 17.5 4.16675 16.7538 4.16675 15.8333V5C4.16675 4.07953 4.91294 3.33334 5.83341 3.33334Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M7.5 3.33333V1.66666H12.5V3.33333M7.5 8.33333H12.5M7.5 12.5H12.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        </svg>
-      </div>
-      <div data-layer="Órdenes de trabajo" class="RdenesDeTrabajo" style="left: 44px; top: 12px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Órdenes de trabajo</div>
-      <div data-layer="Órdenes abiertas" class="RdenesAbiertas" style="width: 25px; height: 20px; left: 174px; top: 12px; position: absolute; background: #3B5055; overflow: hidden; border-radius: 5px">
-        <div data-layer="24" style="left: 5px; top: 2px; position: absolute; color: #D5DEDA; font-size: 11px; font-family: Inter; font-weight: 600; line-height: 15.40px; word-wrap: break-word">24</div>
-      </div>
-    </div>
-    <div data-layer="Menú Inventario" class="MenInventario" style="width: 208px; height: 44px; left: 12px; top: 394px; position: absolute; background: #D5F66A; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="box" class="Box" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_27_172)">
-        <path d="M5.83341 3.75L1.66675 5.83333V14.1667L10.0001 18.3333L18.3334 14.1667V5.83333L10.0001 1.66667L5.83341 3.75ZM10.0001 10L14.1667 7.91667L18.3334 5.83333M14.1667 7.91667L5.83341 3.75M10.0001 10L1.66675 5.83333M10.0001 10V18.3333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_27_172">
-        <rect width="20" height="20" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
-      </div>
-      <div data-layer="Inventario" class="Inventario" style="left: 44px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Inventario</div>
-    </div>
-    <div data-layer="Menú Códigos QR" class="MenCDigosQr" style="width: 208px; height: 44px; left: 12px; top: 446px; position: absolute; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="qr" class="Qr" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.5 6.66667V2.5H6.66667M13.3333 2.5H17.5V6.66667M2.5 13.3333V17.5H6.66667M13.3333 17.5H17.5V13.3333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M5.83325 5.83333H8.33325V8.33333H5.83325V5.83333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M11.6667 5.83333H14.1667V8.33333H11.6667V5.83333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M5.83325 11.6667H8.33325V14.1667H5.83325V11.6667Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        <path d="M11.6667 11.6667H14.1667V14.1667H11.6667" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        </svg>
-      </div>
-      <div data-layer="Códigos QR" class="CDigosQr" style="left: 44px; top: 12px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Códigos QR</div>
-    </div>
-    <div data-layer="Menú Reportes" class="MenReportes" style="width: 208px; height: 44px; left: 12px; top: 498px; position: absolute; overflow: hidden; border-radius: 8px">
-      <div data-svg-wrapper data-layer="chart" class="Chart" style="left: 12px; top: 12px; position: absolute">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.5 2.5V17.5H17.5M5.83333 13.3333V9.16667M10 13.3333V5.83333M14.1667 13.3333V3.33333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-        </svg>
-      </div>
-      <div data-layer="Reportes" class="Reportes" style="left: 44px; top: 12px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Reportes</div>
-    </div>
-    <div data-layer="Separador de menú" class="SeparadorDeMen" style="width: 184px; height: 1px; left: 24px; top: 584px; position: absolute; background: #385057"></div>
-    <div data-layer="ADMINISTRACIÓN" class="AdministraciN" style="left: 24px; top: 612px; position: absolute; color: #BECBC8; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">ADMINISTRACIÓN</div>
-    <div data-svg-wrapper data-layer="settings" class="Settings" style="left: 24px; top: 653px; position: absolute">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M2.5 5H17.5M2.5 10H17.5M2.5 15H17.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      <path d="M6.66667 6.66666C7.58714 6.66666 8.33333 5.92047 8.33333 4.99999C8.33333 4.07952 7.58714 3.33333 6.66667 3.33333C5.74619 3.33333 5 4.07952 5 4.99999C5 5.92047 5.74619 6.66666 6.66667 6.66666Z" fill="#D5DEDA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      <path d="M13.3334 11.6667C14.2539 11.6667 15.0001 10.9205 15.0001 9.99999C15.0001 9.07952 14.2539 8.33333 13.3334 8.33333C12.4129 8.33333 11.6667 9.07952 11.6667 9.99999C11.6667 10.9205 12.4129 11.6667 13.3334 11.6667Z" fill="#D5DEDA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      <path d="M8.33341 16.6667C9.25389 16.6667 10.0001 15.9205 10.0001 15C10.0001 14.0795 9.25389 13.3333 8.33341 13.3333C7.41294 13.3333 6.66675 14.0795 6.66675 15C6.66675 15.9205 7.41294 16.6667 8.33341 16.6667Z" fill="#D5DEDA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      </svg>
-    </div>
-    <div data-layer="Configuración" class="ConfiguraciN" style="left: 56px; top: 653px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Configuración</div>
-    <div data-svg-wrapper data-layer="help" class="Help" style="left: 24px; top: 705px; position: absolute">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      <path d="M7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 9.16667 10 9.16667 10 11.6667M10 14.1667H10.0083" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5DEDA"/>
-      </svg>
-    </div>
-    <div data-layer="Centro de ayuda" class="CentroDeAyuda" style="left: 56px; top: 705px; position: absolute; color: #D5DEDA; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Centro de ayuda</div>
-    <div data-layer="Estado de conexión" class="EstadoDeConexiN" style="width: 200px; height: 72px; left: 16px; top: 1008px; position: absolute; background: #213C42; overflow: hidden; border-radius: 10px">
-      <div data-svg-wrapper data-layer="check" class="Check" style="left: 14px; top: 16px; position: absolute">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3.75 9L6.75 12L14.25 4.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
-        </svg>
-      </div>
-      <div data-layer="Sistema conectado" class="SistemaConectado" style="left: 42px; top: 15px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Sistema conectado</div>
-      <div data-layer="Última sincronización · 09:41" class="LtimaSincronizaciN0941" style="left: 14px; top: 44px; position: absolute; color: #BECBC8; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 14px; word-wrap: break-word">Última sincronización · 09:41</div>
-    </div>
-    <div data-layer="MANTTO · Consola de supervisión" class="ManttoConsolaDeSupervisiN" style="left: 24px; top: 1113px; position: absolute; color: #BECBC8; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 14px; word-wrap: break-word">MANTTO · Consola de supervisión</div>
-  </div>
-  <div data-layer="Inventario" class="Inventario" style="flex: 1 1 0; align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-    <div data-layer="Barra superior" class="BarraSuperior" style="align-self: stretch; height: 80px; position: relative; background: white; overflow: hidden">
-      <div data-layer="Borde de barra" class="BordeDeBarra" style="width: 1368px; height: 1px; left: 0px; top: 79px; position: absolute; background: #DCE3DD"></div>
-      <div data-layer="Operación  /" class="OperaciN" style="left: 32px; top: 30px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Operación  /</div>
-      <div data-layer="Dashboard" class="Dashboard" style="left: 117px; top: 30px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Inventario</div>
-      <div data-layer="Búsqueda global" class="BSquedaGlobal" style="width: 400px; height: 40px; left: 478px; top: 20px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 8px">
-        <div data-svg-wrapper data-layer="search" class="Search" style="left: 14px; top: 10px; position: absolute">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-          <path d="M13.3333 13.3333L17.4999 17.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-          </svg>
-        </div>
-        <div data-layer="Buscar equipo, orden o repuesto..." class="BuscarEquipoOrdenORepuesto" style="left: 46px; top: 11px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Buscar equipo, orden o repuesto...</div>
-      </div>
-      <div data-layer="Notificaciones" class="Notificaciones" style="width: 44px; height: 44px; left: 934px; top: 18px; position: absolute; overflow: hidden">
-        <div data-svg-wrapper data-layer="bell" class="Bell" style="left: 12px; top: 12px; position: absolute">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8.33333 17.5H11.6667M15 6.66666C15 5.34057 14.4732 4.0688 13.5355 3.13112C12.5979 2.19344 11.3261 1.66666 10 1.66666C8.67392 1.66666 7.40215 2.19344 6.46447 3.13112C5.52678 4.0688 5 5.34057 5 6.66666C5 12.5 2.5 12.5 2.5 14.1667H17.5C17.5 12.5 15 12.5 15 6.66666Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-          </svg>
-        </div>
-        <div data-svg-wrapper data-layer="Aviso pendiente" class="AvisoPendiente" style="left: 28px; top: 9px; position: absolute">
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="6" height="6" rx="3" fill="#9A351E"/>
-          </svg>
-        </div>
-      </div>
-      <div data-svg-wrapper data-layer="Separador de cuenta" class="SeparadorDeCuenta" style="left: 999px; top: 22px; position: absolute">
-        <svg width="1" height="36" viewBox="0 0 1 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="1" height="36" fill="#DCE3DD"/>
-        </svg>
-      </div>
-      <div data-layer="María González" class="MarAGonzLez" style="left: 1023px; top: 19px; position: absolute; color: #142C32; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">María González</div>
-      <div data-layer="Supervisora de mantenimiento" class="SupervisoraDeMantenimiento" style="left: 1023px; top: 42px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">Supervisora de mantenimiento</div>
-      <div data-svg-wrapper data-layer="down" class="Down" style="left: 1307px; top: 30px; position: absolute">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-        </svg>
-      </div>
-    </div>
-    <div data-layer="Área de trabajo" class="ReaDeTrabajo" style="align-self: stretch; height: 1072px; padding-top: 24px; padding-bottom: 32px; padding-left: 32px; padding-right: 32px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex">
-      <div data-layer="Título y filtros globales" class="TTuloYFiltrosGlobales" style="align-self: stretch; height: 64px; position: relative; overflow: hidden">
-        <div data-layer="Resumen de operación" class="ResumenDeOperaciN" style="left: 0px; top: 0px; position: absolute; color: #142C32; font-size: 29px; font-family: Inter; font-weight: 600; line-height: 40.60px; word-wrap: break-word">Gestión de inventario</div>
-        <div data-layer="Estado de los equipos y trabajo pendiente en un solo lugar." class="EstadoDeLosEquiposYTrabajoPendienteEnUnSoloLugar" style="left: 0px; top: 45px; position: absolute; color: #53666A; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 19.60px; word-wrap: break-word">Controla repuestos, equipos y niveles de stock de Planta Norte.</div>
-        <div data-layer="Exportar órdenes" class="ExportarRdenes" style="width: 132px; height: 40px; left: 970px; top: 7px; position: absolute; background: white; overflow: hidden; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-svg-wrapper data-layer="download" class="Download" style="left: 13px; top: 11px; position: absolute">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 2.25V11.25M12.75 7.5L9 11.25L5.25 7.5M3 12V15.75H15V12" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-            </svg>
-          </div>
-          <div data-layer="Exportar" class="Exportar" style="left: 41px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Exportar</div>
-        </div>
-        <div data-layer="Agregar artículo" class="AgregarArtCulo" style="width: 190px; height: 40px; left: 1114px; top: 7px; position: absolute; background: #D5F66A; overflow: hidden; border-radius: 8px">
-          <div data-svg-wrapper data-layer="plus" class="Plus" style="left: 14px; top: 11px; position: absolute">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 3.75V9M9 9V14.25M9 9H3.75M9 9H14.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-            </svg>
-          </div>
-          <div data-layer="Nueva orden" class="NuevaOrden" style="left: 42px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Agregar artículo</div>
-        </div>
-      </div>
-      <div data-layer="Indicadores de inventario" class="IndicadoresDeInventario" style="align-self: stretch; height: 148px; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-        <div data-layer="Artículos registrados" class="ArtCulosRegistrados" style="flex: 1 1 0; height: 148px; position: relative; background: white; overflow: hidden; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Disponibilidad de equipos" class="DisponibilidadDeEquipos" style="left: 20px; top: 16px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Artículos registrados</div>
-          <div data-layer="Indicador" class="Indicador" style="width: 30px; height: 30px; left: 258px; top: 16px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 8px">
-            <div data-svg-wrapper data-layer="box" class="Box" style="left: 6px; top: 6px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_27_1264)">
-              <path d="M5.25 3.375L1.5 5.25V12.75L9 16.5L16.5 12.75V5.25L9 1.5L5.25 3.375ZM16.5 5.25L12.75 7.125M12.75 7.125L9 9M12.75 7.125L5.25 3.375M9 9L1.5 5.25M9 9V16.5" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-              </g>
-              <defs>
-              <clipPath id="clip0_27_1264">
-              <rect width="18" height="18" fill="white"/>
-              </clipPath>
-              </defs>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="90,6" class="6" style="left: 20px; top: 43px; position: absolute; color: #142C32; font-size: 38px; font-family: Inter; font-weight: 600; line-height: 53.20px; word-wrap: break-word">248</div>
-          <div data-layer="116 de 128 equipos operativos" class="De128EquiposOperativos" style="left: 20px; top: 101px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">186 repuestos · 62 equipos</div>
-          <div data-layer="+2,3 pp vs. mes anterior" class="23PpVsMesAnterior" style="left: 20px; top: 123px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 500; line-height: 14px; word-wrap: break-word">Catálogo de Planta Norte</div>
-        </div>
-        <div data-layer="Bajo stock mínimo" class="BajoStockMNimo" style="flex: 1 1 0; height: 148px; position: relative; background: white; overflow: hidden; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Equipos detenidos" class="EquiposDetenidos" style="left: 20px; top: 16px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Bajo stock mínimo</div>
-          <div data-layer="Indicador" class="Indicador" style="width: 30px; height: 30px; left: 258px; top: 16px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 8px">
-            <div data-svg-wrapper data-layer="alert" class="Alert" style="left: 6px; top: 6px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 6.75V10.5M9 12.75H9.0075M9 2.25L1.5 15.75H16.5L9 2.25Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="04" style="left: 20px; top: 43px; position: absolute; color: #142C32; font-size: 38px; font-family: Inter; font-weight: 600; line-height: 53.20px; word-wrap: break-word">03</div>
-          <div data-layer="8 adicionales en mantenimiento" class="AdicionalesEnMantenimiento" style="left: 20px; top: 101px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Requieren reposición</div>
-          <div data-layer="Requieren atención inmediata" class="RequierenAtenciNInmediata" style="left: 20px; top: 123px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 500; line-height: 14px; word-wrap: break-word">Prioriza los repuestos críticos</div>
-        </div>
-        <div data-layer="Sin existencias" class="SinExistencias" style="flex: 1 1 0; height: 148px; position: relative; background: white; overflow: hidden; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Órdenes abiertas" class="RdenesAbiertas" style="left: 20px; top: 16px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Sin existencias</div>
-          <div data-layer="Indicador" class="Indicador" style="width: 30px; height: 30px; left: 258px; top: 16px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 8px">
-            <div data-svg-wrapper data-layer="alert" class="Alert" style="left: 6px; top: 6px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 6.75V10.5M9 12.75H9.0075M9 2.25L1.5 15.75H16.5L9 2.25Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="24" style="left: 20px; top: 43px; position: absolute; color: #142C32; font-size: 38px; font-family: Inter; font-weight: 600; line-height: 53.20px; word-wrap: break-word">01</div>
-          <div data-layer="6 de prioridad alta · 3 vencidas" class="DePrioridadAlta3Vencidas" style="left: 20px; top: 101px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Correa de transmisión B-42</div>
-          <div data-layer="18 correctivas · 6 preventivas" class="Correctivas6Preventivas" style="left: 20px; top: 123px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 500; line-height: 14px; word-wrap: break-word">Requiere atención inmediata</div>
-        </div>
-        <div data-layer="Valor del inventario" class="ValorDelInventario" style="flex: 1 1 0; height: 148px; position: relative; background: white; overflow: hidden; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Cumplimiento preventivo" class="CumplimientoPreventivo" style="left: 20px; top: 16px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Valor del inventario</div>
-          <div data-layer="Indicador" class="Indicador" style="width: 30px; height: 30px; left: 258px; top: 16px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 8px">
-            <div data-svg-wrapper data-layer="chart" class="Chart" style="left: 6px; top: 6px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2.25 2.25V15.75H15.75M5.25 12V8.25M9 12V5.25M12.75 12V3" stroke-width="1.62" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="92" style="left: 20px; top: 43px; position: absolute; color: #142C32; font-size: 32px; font-family: Inter; font-weight: 600; line-height: 44.80px; word-wrap: break-word">$ 48.250</div>
-          <div data-layer="46 de 50 completadas · Meta: 95 %" class="De50CompletadasMeta95" style="left: 20px; top: 101px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Valorización al costo de compra</div>
-          <div data-layer="+2,3 pp vs. mes anterior" class="23PpVsMesAnterior" style="left: 20px; top: 123px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 500; line-height: 14px; word-wrap: break-word">Actualizado · 13 nov 2026</div>
-        </div>
-      </div>
-      <div data-layer="Contenido de inventario" class="ContenidoDeInventario" style="align-self: stretch; height: 756px; position: relative">
-        <div data-layer="Catálogo de artículos" class="CatLogoDeArtCulos" style="width: 920px; height: 756px; left: 0px; top: 0px; position: absolute; background: white; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Repuestos y equipos" class="RepuestosYEquipos" style="left: 24px; top: 19px; position: absolute; color: #142C32; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">Repuestos y equipos</div>
-          <div data-layer="248 artículos" class="ArtCulos" style="left: 756px; top: 26px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">248 artículos</div>
-          <div data-layer="Todos  248" class="Todos248" style="width: 120px; height: 40px; left: 24px; top: 64px; position: absolute; background: #142C32; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Todos  248" class="Todos248" style="left: 14px; top: 11px; position: absolute; color: white; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Todos  248</div>
-          </div>
-          <div data-layer="Bajo stock  3" class="BajoStock3" style="width: 132px; height: 40px; left: 152px; top: 64px; position: absolute; background: #F3F5F2; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Bajo stock  3" class="BajoStock3" style="left: 14px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Bajo stock  3</div>
-          </div>
-          <div data-layer="Sin stock  1" class="SinStock1" style="width: 124px; height: 40px; left: 292px; top: 64px; position: absolute; background: #F3F5F2; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Sin stock  1" class="SinStock1" style="left: 14px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Sin stock  1</div>
-          </div>
-          <div data-layer="Buscar artículo" class="BuscarArtCulo" style="width: 430px; height: 40px; left: 24px; top: 120px; position: absolute; background: #F3F5F2; border-radius: 8px">
-            <div data-svg-wrapper data-layer="search" class="Search" style="left: 12px; top: 10px; position: absolute">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.1667 8.33333C14.1667 11.555 11.555 14.1667 8.33333 14.1667C5.11167 14.1667 2.5 11.555 2.5 8.33333C2.5 5.11167 5.11167 2.5 8.33333 2.5C11.555 2.5 14.1667 5.11167 14.1667 8.33333Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              <path d="M13.3333 13.3333L17.4999 17.5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-            <div data-layer="Buscar por nombre o código…" class="BuscarPorNombreOCDigo" style="left: 42px; top: 11px; position: absolute; color: #53666A; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Buscar por nombre o código…</div>
-          </div>
-          <div data-layer="Filtro categoría" class="FiltroCategorA" style="width: 230px; height: 40px; left: 466px; top: 120px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Todas las categorías" class="TodasLasCategorAs" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Todas las categorías</div>
-            <div data-svg-wrapper data-layer="down" class="Down" style="left: 200px; top: 12px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Filtro ubicación" class="FiltroUbicaciN" style="width: 188px; height: 40px; left: 708px; top: 120px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Todo el almacén" class="TodoElAlmacN" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Todo el almacén</div>
-            <div data-svg-wrapper data-layer="down" class="Down" style="left: 158px; top: 12px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Cabecera de tabla" class="CabeceraDeTabla" style="width: 920px; height: 38px; left: 0px; top: 180px; position: absolute; background: #EDF1EC"></div>
-          <div data-layer="ARTÍCULO" class="ArtCulo" style="left: 24px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">ARTÍCULO</div>
-          <div data-layer="TIPO" class="Tipo" style="left: 306px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">TIPO</div>
-          <div data-layer="STOCK" class="Stock" style="left: 420px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">STOCK</div>
-          <div data-layer="MÍN." class="MN" style="left: 490px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">MÍN.</div>
-          <div data-layer="UBICACIÓN" class="UbicaciN" style="left: 558px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">UBICACIÓN</div>
-          <div data-layer="ESTADO" class="Estado" style="left: 694px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">ESTADO</div>
-          <div data-layer="ACCIÓN" class="AcciN" style="left: 824px; top: 192px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 600; line-height: 14px; word-wrap: break-word">ACCIÓN</div>
-          <div data-layer="Artículo · REP-0034" class="ArtCuloRep0034" style="width: 920px; height: 66px; left: 0px; top: 218px; position: absolute; background: #FAFCF6">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Rodamiento SKF 6205" class="RodamientoSkf6205" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Rodamiento SKF 6205</div>
-            <div data-layer="REP-0034" class="Rep0034" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">REP-0034</div>
-            <div data-layer="Repuesto" class="Repuesto" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Repuesto</div>
-            <div data-layer="04" style="left: 420px; top: 21px; position: absolute; color: #745B1A; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">04</div>
-            <div data-layer="10" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">10</div>
-            <div data-layer="Almacén A-02" class="AlmacNA02" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén A-02</div>
-            <div data-layer="Reponer" class="Reponer" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #F7EACB; border-radius: 5px">
-              <div data-layer="Reponer" class="Reponer" style="left: 9px; top: 4px; position: absolute; color: #745B1A; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Reponer</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · REP-0081" class="ArtCuloRep0081" style="width: 920px; height: 66px; left: 0px; top: 284px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Sello mecánico 25 mm" class="SelloMecNico25Mm" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Sello mecánico 25 mm</div>
-            <div data-layer="REP-0081" class="Rep0081" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">REP-0081</div>
-            <div data-layer="Repuesto" class="Repuesto" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Repuesto</div>
-            <div data-layer="02" style="left: 420px; top: 21px; position: absolute; color: #745B1A; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">02</div>
-            <div data-layer="08" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">08</div>
-            <div data-layer="Almacén A-04" class="AlmacNA04" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén A-04</div>
-            <div data-layer="Reponer" class="Reponer" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #F7EACB; border-radius: 5px">
-              <div data-layer="Reponer" class="Reponer" style="left: 9px; top: 4px; position: absolute; color: #745B1A; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Reponer</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · REP-0109" class="ArtCuloRep0109" style="width: 920px; height: 66px; left: 0px; top: 350px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Correa de transmisión B-42" class="CorreaDeTransmisiNB42" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Correa de transmisión B-42</div>
-            <div data-layer="REP-0109" class="Rep0109" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">REP-0109</div>
-            <div data-layer="Repuesto" class="Repuesto" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Repuesto</div>
-            <div data-layer="00" style="left: 420px; top: 21px; position: absolute; color: #9A351E; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">00</div>
-            <div data-layer="06" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">06</div>
-            <div data-layer="Almacén B-01" class="AlmacNB01" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén B-01</div>
-            <div data-layer="Agotado" class="Agotado" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #FCE8DF; border-radius: 5px">
-              <div data-layer="Agotado" class="Agotado" style="left: 9px; top: 4px; position: absolute; color: #9A351E; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Agotado</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · REP-0128" class="ArtCuloRep0128" style="width: 920px; height: 66px; left: 0px; top: 416px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Aceite hidráulico ISO 46" class="AceiteHidrUlicoIso46" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Aceite hidráulico ISO 46</div>
-            <div data-layer="REP-0128" class="Rep0128" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">REP-0128</div>
-            <div data-layer="Repuesto" class="Repuesto" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Repuesto</div>
-            <div data-layer="06" style="left: 420px; top: 21px; position: absolute; color: #745B1A; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">06</div>
-            <div data-layer="12" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">12</div>
-            <div data-layer="Almacén B-03" class="AlmacNB03" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén B-03</div>
-            <div data-layer="Reponer" class="Reponer" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #F7EACB; border-radius: 5px">
-              <div data-layer="Reponer" class="Reponer" style="left: 9px; top: 4px; position: absolute; color: #745B1A; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Reponer</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · REP-0142" class="ArtCuloRep0142" style="width: 920px; height: 66px; left: 0px; top: 482px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Filtro de aire industrial" class="FiltroDeAireIndustrial" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Filtro de aire industrial</div>
-            <div data-layer="REP-0142" class="Rep0142" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">REP-0142</div>
-            <div data-layer="Repuesto" class="Repuesto" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Repuesto</div>
-            <div data-layer="24" style="left: 420px; top: 21px; position: absolute; color: #142C32; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">24</div>
-            <div data-layer="10" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">10</div>
-            <div data-layer="Almacén A-03" class="AlmacNA03" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén A-03</div>
-            <div data-layer="Disponible" class="Disponible" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #E7EDE6; border-radius: 5px">
-              <div data-layer="Disponible" class="Disponible" style="left: 9px; top: 4px; position: absolute; color: #455C4D; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Disponible</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · EQ-0062" class="ArtCuloEq0062" style="width: 920px; height: 66px; left: 0px; top: 548px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Motor eléctrico 3 HP" class="MotorElCtrico3Hp" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Motor eléctrico 3 HP</div>
-            <div data-layer="EQ-0062" class="Eq0062" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">EQ-0062</div>
-            <div data-layer="Equipo" class="Equipo" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Equipo</div>
-            <div data-layer="03" style="left: 420px; top: 21px; position: absolute; color: #142C32; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">03</div>
-            <div data-layer="01" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">01</div>
-            <div data-layer="Almacén C-01" class="AlmacNC01" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén C-01</div>
-            <div data-layer="Disponible" class="Disponible" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #E7EDE6; border-radius: 5px">
-              <div data-layer="Disponible" class="Disponible" style="left: 9px; top: 4px; position: absolute; color: #455C4D; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Disponible</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Artículo · EQ-0041" class="ArtCuloEq0041" style="width: 920px; height: 66px; left: 0px; top: 614px; position: absolute; background: white">
-            <div data-layer="Separador" class="Separador" style="width: 872px; height: 1px; left: 24px; top: 65px; position: absolute; background: #EDF1EC"></div>
-            <div data-layer="Bomba centrífuga auxiliar" class="BombaCentrFugaAuxiliar" style="width: 266px; left: 24px; top: 12px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 500; line-height: 18.20px; word-wrap: break-word">Bomba centrífuga auxiliar</div>
-            <div data-layer="EQ-0041" class="Eq0041" style="left: 24px; top: 36px; position: absolute; color: #53666A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">EQ-0041</div>
-            <div data-layer="Equipo" class="Equipo" style="left: 306px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Equipo</div>
-            <div data-layer="02" style="left: 420px; top: 21px; position: absolute; color: #142C32; font-size: 14px; font-family: Inter; font-weight: 600; line-height: 19.60px; word-wrap: break-word">02</div>
-            <div data-layer="01" style="left: 490px; top: 23px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">01</div>
-            <div data-layer="Almacén C-02" class="AlmacNC02" style="left: 558px; top: 23px; position: absolute; color: #142C32; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Almacén C-02</div>
-            <div data-layer="Disponible" class="Disponible" style="width: 94px; height: 24px; left: 694px; top: 21px; position: absolute; background: #E7EDE6; border-radius: 5px">
-              <div data-layer="Disponible" class="Disponible" style="left: 9px; top: 4px; position: absolute; color: #455C4D; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Disponible</div>
-            </div>
-            <div data-layer="Editar" class="Editar" style="left: 824px; top: 23px; position: absolute; color: #37634D; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Editar</div>
-          </div>
-          <div data-layer="Mostrando 1–7 de 248 artículos" class="Mostrando17De248ArtCulos" style="left: 24px; top: 716px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Mostrando 1–7 de 248 artículos</div>
-          <div data-layer="Página anterior" class="PGinaAnterior" style="width: 36px; height: 34px; left: 768px; top: 704px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 6px">
-            <div data-svg-wrapper data-layer="back" class="Back" style="left: 9px; top: 8px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.25 3.75L6 9L11.25 14.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Página actual" class="PGinaActual" style="width: 36px; height: 34px; left: 812px; top: 704px; position: absolute; background: #142C32; overflow: hidden; border-radius: 6px">
-            <div data-layer="1" style="left: 14px; top: 8px; position: absolute; color: white; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">1</div>
-          </div>
-          <div data-layer="Página siguiente" class="PGinaSiguiente" style="width: 36px; height: 34px; left: 856px; top: 704px; position: absolute; background: #F3F5F2; overflow: hidden; border-radius: 6px">
-            <div data-svg-wrapper data-layer="arrow" class="Arrow" style="left: 9px; top: 8px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.75 3.75L12 9L6.75 14.25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div data-layer="Editar artículo seleccionado" class="EditarArtCuloSeleccionado" style="width: 360px; height: 756px; left: 944px; top: 0px; position: absolute; background: white; border-radius: 12px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-          <div data-layer="Editar artículo" class="EditarArtCulo" style="left: 24px; top: 20px; position: absolute; color: #142C32; font-size: 20px; font-family: Inter; font-weight: 600; line-height: 28px; word-wrap: break-word">Editar artículo</div>
-          <div data-layer="REP-0034 · Repuesto" class="Rep0034Repuesto" style="left: 24px; top: 53px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16.80px; word-wrap: break-word">REP-0034 · Repuesto</div>
-          <div data-layer="Reponer" class="Reponer" style="width: 94px; height: 24px; left: 242px; top: 52px; position: absolute; background: #F7EACB; border-radius: 5px">
-            <div data-layer="Reponer" class="Reponer" style="left: 9px; top: 4px; position: absolute; color: #745B1A; font-size: 11px; font-family: Inter; font-weight: 500; line-height: 15.40px; word-wrap: break-word">Reponer</div>
-          </div>
-          <div data-layer="Separador" class="Separador" style="width: 312px; height: 1px; left: 24px; top: 92px; position: absolute; background: #DCE3DD"></div>
-          <div data-layer="Nombre del artículo" class="NombreDelArtCulo" style="left: 24px; top: 112px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Nombre del artículo</div>
-          <div data-layer="Nombre del artículo · Campo" class="NombreDelArtCuloCampo" style="width: 312px; height: 42px; left: 24px; top: 136px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Rodamiento SKF 6205" class="RodamientoSkf6205" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Rodamiento SKF 6205</div>
-          </div>
-          <div data-layer="Código" class="CDigo" style="left: 24px; top: 200px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Código</div>
-          <div data-layer="Código · Campo" class="CDigoCampo" style="width: 148px; height: 42px; left: 24px; top: 224px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="REP-0034" class="Rep0034" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">REP-0034</div>
-          </div>
-          <div data-layer="Tipo" class="Tipo" style="left: 188px; top: 200px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Tipo</div>
-          <div data-layer="Tipo · Campo" class="TipoCampo" style="width: 148px; height: 42px; left: 188px; top: 224px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Repuesto" class="Repuesto" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Repuesto</div>
-            <div data-svg-wrapper data-layer="down" class="Down" style="left: 118px; top: 12px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Categoría" class="CategorA" style="left: 24px; top: 288px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Categoría</div>
-          <div data-layer="Categoría · Campo" class="CategorACampo" style="width: 312px; height: 42px; left: 24px; top: 312px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Rodamientos" class="Rodamientos" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Rodamientos</div>
-            <div data-svg-wrapper data-layer="down" class="Down" style="left: 282px; top: 12px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Ubicación" class="UbicaciN" style="left: 24px; top: 376px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Ubicación</div>
-          <div data-layer="Ubicación · Campo" class="UbicaciNCampo" style="width: 312px; height: 42px; left: 24px; top: 400px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Almacén A-02" class="AlmacNA02" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">Almacén A-02</div>
-            <div data-svg-wrapper data-layer="down" class="Down" style="left: 282px; top: 12px; position: absolute">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
-              </svg>
-            </div>
-          </div>
-          <div data-layer="Stock disponible" class="StockDisponible" style="left: 24px; top: 464px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Stock disponible</div>
-          <div data-layer="Stock disponible · Campo" class="StockDisponibleCampo" style="width: 148px; height: 42px; left: 24px; top: 488px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="4" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">4</div>
-          </div>
-          <div data-layer="Stock mínimo" class="StockMNimo" style="left: 188px; top: 464px; position: absolute; color: #53666A; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16.80px; word-wrap: break-word">Stock mínimo</div>
-          <div data-layer="Stock mínimo · Campo" class="StockMNimoCampo" style="width: 148px; height: 42px; left: 188px; top: 488px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="10" style="left: 12px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 400; line-height: 18.20px; word-wrap: break-word">10</div>
-          </div>
-          <div data-layer="Aviso de reposición" class="AvisoDeReposiciN" style="width: 312px; height: 62px; left: 24px; top: 554px; position: absolute; background: #F7EACB; border-radius: 8px">
-            <div data-layer="Stock por debajo del mínimo" class="StockPorDebajoDelMNimo" style="left: 12px; top: 10px; position: absolute; color: #745B1A; font-size: 12px; font-family: Inter; font-weight: 600; line-height: 16.80px; word-wrap: break-word">Stock por debajo del mínimo</div>
-            <div data-layer="Faltan 6 unidades para alcanzar el mínimo." class="Faltan6UnidadesParaAlcanzarElMNimo" style="left: 12px; top: 33px; position: absolute; color: #745B1A; font-size: 11px; font-family: Inter; font-weight: 400; line-height: 15.40px; word-wrap: break-word">Faltan 6 unidades para alcanzar el mínimo.</div>
-          </div>
-          <div data-layer="Último cambio · Hoy, 09:25 por María González" class="LtimoCambioHoy0925PorMarAGonzLez" style="left: 24px; top: 636px; position: absolute; color: #53666A; font-size: 10px; font-family: Inter; font-weight: 400; line-height: 14px; word-wrap: break-word">Último cambio · Hoy, 09:25 por María González</div>
-          <div data-layer="Cancelar" class="Cancelar" style="width: 106px; height: 40px; left: 24px; top: 690px; position: absolute; background: white; border-radius: 8px; outline: 1px #DCE3DD solid; outline-offset: -1px">
-            <div data-layer="Cancelar" class="Cancelar" style="left: 14px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Cancelar</div>
-          </div>
-          <div data-layer="Guardar cambios" class="GuardarCambios" style="width: 194px; height: 40px; left: 142px; top: 690px; position: absolute; background: #D5F66A; border-radius: 8px">
-            <div data-layer="Guardar cambios" class="GuardarCambios" style="left: 14px; top: 11px; position: absolute; color: #142C32; font-size: 13px; font-family: Inter; font-weight: 600; line-height: 18.20px; word-wrap: break-word">Guardar cambios</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</body>
+</html>
