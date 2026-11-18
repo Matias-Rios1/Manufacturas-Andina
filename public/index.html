@@ -32,7 +32,7 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(20, 44, 50, 0.08);
-            max-width: 480px;
+            max-width: 560px;
             width: 100%;
         }
         .brand {
@@ -75,6 +75,9 @@
             border-top: 1px solid var(--border-subtle);
             padding-top: 20px;
         }
+        .modules-group + .modules-group {
+            margin-top: 22px;
+        }
         .modules-title {
             font-size: 13px;
             text-transform: uppercase;
@@ -116,11 +119,26 @@
         </div>
 
         <nav class="modules-nav" aria-label="Accesos directos a vistas del sistema">
-            <p class="modules-title">Módulos disponibles</p>
-            <div class="modules-list">
-                <a href="../src/pages/AppMobile/inicio/inicio.html" class="module-link">Inicio Técnico</a>
-                <a href="../src/pages/AppMobile/Ordenes-Trabajo/OrdenTrabajo.html" class="module-link">Órdenes de Trabajo</a>
-                <a href="../src/pages/AppMobile/ReportarFallas/ReportarFallas.html" class="module-link">Reportar Fallas</a>
+            <div class="modules-group">
+                <p class="modules-title">Aplicación móvil</p>
+                <div class="modules-list">
+                    <a href="../src/pages/AppMobile/inicio/inicio.html" class="module-link">Inicio Técnico</a>
+                    <a href="../src/pages/AppMobile/Ordenes-Trabajo/OrdenTrabajo.html" class="module-link">Órdenes de Trabajo</a>
+                    <a href="../src/pages/AppMobile/ReportarFallas/ReportarFallas.html" class="module-link">Reportar Fallas</a>
+                </div>
+            </div>
+
+            <div class="modules-group">
+                <p class="modules-title">Sitio web de supervisión</p>
+                <div class="modules-list">
+                    <a href="../src/pages/WebSite/Equipos/Equipos.html" class="module-link">Equipos</a>
+                    <a href="../src/pages/WebSite/OrdenTrabajo/OrdenTrabajo.html" class="module-link">Historial de Órdenes</a>
+                    <a href="../src/pages/WebSite/Inventario/Inventario.html" class="module-link">Inventario</a>
+                    <a href="../src/pages/WebSite/CodigoQR/CodigoQR.html" class="module-link">Códigos QR</a>
+                    <a href="../src/pages/WebSite/ReportesAnaliticos/ReportesAnaliticos.html" class="module-link">Reportes Analíticos</a>
+                    <a href="../src/pages/WebSite/ConfUsers/ConfUsers.html" class="module-link">Configuración de Usuarios</a>
+                    <a href="../src/pages/WebSite/CentroAyuda/CentroAyuda.html" class="module-link">Centro de Ayuda</a>
+                </div>
             </div>
         </nav>
     </main>
