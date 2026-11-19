@@ -16,10 +16,13 @@
   // Rutas relativas entre las carpetas de src/pages/WebSite/.
   const RUTAS = {
     'dashboard': '../Dashboard/Dashboard.html',
+    'equipos': '../Equipos/Equipos.html',
     'ordenes de trabajo': '../OrdenTrabajo/OrdenTrabajo.html',
     'inventario': '../Inventario/Inventario.html',
+    'codigos qr': '../CodigoQR/CodigoQR.html',
     'reportes': '../ReportesAnaliticos/ReportesAnaliticos.html',
-    'configuracion': '../ConfUsers/ConfUsers.html'
+    'configuracion': '../ConfUsers/ConfUsers.html',
+    'centro de ayuda': '../CentroAyuda/CentroAyuda.html'
   };
 
   /* ------------------------------ Utilidades ------------------------------ */
