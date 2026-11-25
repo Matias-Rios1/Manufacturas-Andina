@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de ayuda - MANTTO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CentroAyuda.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <h1>MANTTO</h1>
+            <span class="subtitle">SUPERVISIÓN INDUSTRIAL</span>
+        </div>
+        <div class="workspace-selector">
+            <label class="label" for="selector-planta">ESPACIO DE TRABAJO</label>
+            <select id="selector-planta">
+                <option value="planta-norte">Planta Norte</option>
+            </select>
+        </div>
+
+        <div class="menu-group">
+            <span class="menu-title">OPERACIÓN</span>
+            <nav class="nav-menu" aria-label="Operación">
+                <a href="../Dashboard/Dashboard.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 2.5H7.5C7.96024 2.5 8.33333 2.8731 8.33333 3.33333V7.5C8.33333 7.96024 7.96024 8.33333 7.5 8.33333H3.33333C2.8731 8.33333 2.5 7.96024 2.5 7.5V3.33333C2.5 2.8731 2.8731 2.5 3.33333 2.5Z"/><path d="M12.5003 2.5H16.667C17.1272 2.5 17.5003 2.8731 17.5003 3.33333V7.5C17.5003 7.96024 17.1272 8.33333 16.667 8.33333H12.5003C12.0401 8.33333 11.667 7.96024 11.667 7.5V3.33333C11.667 2.8731 12.0401 2.5 12.5003 2.5Z"/><path d="M3.33333 11.6667H7.5C7.96024 11.6667 8.33333 12.0398 8.33333 12.5V16.6667C8.33333 17.1269 7.96024 17.5 7.5 17.5H3.33333C2.8731 17.5 2.5 17.1269 2.5 16.6667V12.5C2.5 12.0398 2.8731 11.6667 3.33333 11.6667Z"/><path d="M12.5003 11.6667H16.667C17.1272 11.6667 17.5003 12.0398 17.5003 12.5V16.6667C17.5003 17.1269 17.1272 17.5 16.667 17.5H12.5003C12.0401 17.5 11.667 17.1269 11.667 16.6667V12.5C11.667 12.0398 12.0401 11.6667 12.5003 11.6667Z"/></svg><span>Dashboard</span></a>
+                <a href="../Equipos/Equipos.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.16667 5H15.8333C16.7538 5 17.5 5.74619 17.5 6.66667V15C17.5 15.9205 16.7538 16.6667 15.8333 16.6667H4.16667C3.24619 16.6667 2.5 15.9205 2.5 15V6.66667C2.5 5.74619 3.24619 5 4.16667 5Z"/><path d="M6.66667 5V2.5H13.3333V5M2.5 10H7.5M7.5 10H12.5M7.5 10V8.33333M7.5 10V11.6667M12.5 10H17.5M12.5 10V8.33333M12.5 10V11.6667"/></svg><span>Equipos</span></a>
+                <a href="../OrdenTrabajo/OrdenTrabajo.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.83366 3.33333H14.167C15.0875 3.33333 15.8337 4.07952 15.8337 4.99999V15.8333C15.8337 16.7538 15.0875 17.5 14.167 17.5H5.83366C4.91318 17.5 4.16699 16.7538 4.16699 15.8333V4.99999C4.16699 4.07952 4.91318 3.33333 5.83366 3.33333Z"/><path d="M7.5 10H12.5M7.5 13.3333H10.8333M7.5 2.5H12.5V5.83333H7.5V2.5Z"/></svg><span>Órdenes de trabajo</span><span class="badge">24</span></a>
+                <a href="../Inventario/Inventario.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.05263 4.25439L10 2.5L17.5 5.83333V15L10 18.3333L2.5 15V5.83333L6.05263 4.25439ZM2.5 5.83333L10 9.16667M6.05263 4.25439L5.83333 4.16667M6.05263 4.25439L13.9474 7.41228M17.5 5.83333L13.9474 7.41228M10 18.3333V9.16667M10 9.16667L13.9474 7.41228M13.9474 7.41228L14.1667 7.5"/></svg><span>Inventario</span></a>
+                <a href="../CodigoQR/CodigoQR.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 2.5H8.33333V8.33333H2.5V2.5ZM11.6667 2.5H17.5V8.33333H11.6667V2.5ZM2.5 11.6667H8.33333V17.5H2.5V11.6667ZM11.6667 11.6667H14.1667V14.1667H17.5V17.5H11.6667V11.6667Z"/></svg><span>Códigos QR</span></a>
+                <a href="../ReportesAnaliticos/ReportesAnaliticos.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33301 2.5V17.5H17.4997M6.66634 13.3333V9.16667M10.833 13.3333V5M14.9997 13.3333V7.5"/></svg><span>Reportes</span></a>
+            </nav>
+        </div>
+
+        <hr class="menu-divider">
+
+        <div class="menu-group">
+            <span class="menu-title">ADMINISTRACIÓN</span>
+            <nav class="nav-menu" aria-label="Administración">
+                <a href="../ConfUsers/ConfUsers.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 2.5L6.66667 5L4.16667 5.83333L2.5 10L4.16667 14.1667L6.66667 15L7.5 17.5H12.5L13.3333 15L15.8333 14.1667L17.5 10L15.8333 5.83333L13.3333 5L12.5 2.5H7.5Z"/><path d="M12.5 10C12.5 11.3807 11.3807 12.5 10 12.5C8.61929 12.5 7.5 11.3807 7.5 10C7.5 8.61929 8.61929 7.5 10 7.5C11.3807 7.5 12.5 8.61929 12.5 10Z"/></svg><span>Configuración</span></a>
+                <a href="../CentroAyuda/CentroAyuda.html" class="nav-item active" aria-current="page"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z"/><path d="M7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 9.16667 10 9.16667 10 11.6667M10 14.1667V14.25"/></svg><span>Centro de ayuda</span></a>
+            </nav>
+        </div>
+
+        <div class="connection-status">
+            <span class="status-title"><span class="dot"></span>Sistema conectado · <span data-hora>09:41</span></span>
+            <span class="status-detail">Todos los servicios operativos</span>
+        </div>
+    </aside>
+
+    <div class="main-wrapper">
+        <header class="topbar">
+            <div class="breadcrumb">Administración<span class="sep">/</span><strong>Centro de ayuda</strong></div>
+            <div class="search-bar" role="search">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A" class="icono-buscar"><path d="M12 7.5C12 9.98528 9.98528 12 7.5 12C5.01472 12 3 9.98528 3 7.5C3 5.01472 5.01472 3 7.5 3C9.98528 3 12 5.01472 12 7.5Z"/><path d="M11.25 11.25L15 15"/></svg>
+                <input type="text" placeholder="Buscar en MANTTO..." aria-label="Buscar en MANTTO">
+                <span class="atajo" aria-hidden="true">⌘ K</span>
+            </div>
+            <div class="user-actions">
+                <button type="button" class="notification-btn" aria-label="Notificaciones"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M8.75 18.375H12.25M4.375 14.875H16.625L14.875 12.25V7.875C14.875 6.71468 14.4141 5.60188 13.5936 4.78141C12.7731 3.96094 11.6603 3.5 10.5 3.5C9.33968 3.5 8.22688 3.96094 7.40641 4.78141C6.58594 5.60188 6.125 6.71468 6.125 7.875V12.25L4.375 14.875Z"/></svg><span class="indicator"></span></button>
+                <div class="divider-vertical"></div>
+                <div class="user-info">
+                    <span class="user-name">María González</span>
+                    <span class="user-role">Supervisora de mantenimiento</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <div class="page-header">
+                <div class="header-text">
+                    <h2>Centro de ayuda</h2>
+                    <p>Encuentra respuestas y sigue operando sin interrupciones.</p>
+                </div>
+                <span class="etiqueta-documentacion">DOCUMENTACIÓN MANTTO</span>
+            </div>
+
+            <section class="buscador-ayuda" aria-labelledby="titulo-buscador">
+                <div class="buscador-textos">
+                    <h3 id="titulo-buscador">¿En qué podemos ayudarte?</h3>
+                    <p>Guías prácticas para tu operación diaria.</p>
+                </div>
+                <div class="buscador-campo">
+                    <form class="campo-ayuda" id="formulario-ayuda" role="search">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M14.667 9.16667C14.667 12.2042 12.2046 14.6667 9.16699 14.6667C6.12943 14.6667 3.66699 12.2042 3.66699 9.16667C3.66699 6.12911 6.12943 3.66667 9.16699 3.66667C12.2046 3.66667 14.667 6.12911 14.667 9.16667Z"/><path d="M13.75 13.75L19.25 19.25"/></svg>
+                        <input type="search" id="buscar-ayuda" placeholder="Buscar artículos, guías o preguntas..." aria-label="Buscar artículos, guías o preguntas" autocomplete="off">
+                        <button type="submit" class="atajo-enter" aria-label="Buscar">↵</button>
+                    </form>
+                    <p class="frecuentes">
+                        <span>Búsquedas frecuentes:</span>
+                        <button type="button" class="busqueda-frecuente">registrar equipo</button>
+                        <span aria-hidden="true">·</span>
+                        <button type="button" class="busqueda-frecuente">imprimir QR</button>
+                        <span aria-hidden="true">·</span>
+                        <button type="button" class="busqueda-frecuente">crear una orden</button>
+                    </p>
+                </div>
+            </section>
+
+            <section class="categorias" aria-label="Categorías de ayuda">
+                <button type="button" class="categoria" data-categoria="primeros-pasos" aria-pressed="false">
+                    <span class="categoria-icono"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M10 16.6667C12.5 15 15 15 17.5 15.8333V3.33333C15 2.49999 12.5 2.49999 10 4.16666C7.5 2.49999 5 2.49999 2.5 3.33333V15.8333C5 15 7.5 15 10 16.6667ZM10 4.16666V16.6667"/></svg></span>
+                    <span class="categoria-flecha"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A"><path d="M3.54199 8.50001H13.4587M9.91699 12.0417L13.4587 8.50001L9.91699 4.95834"/></svg></span>
+                    <strong>Primeros pasos</strong>
+                    <span>Comienza con MANTTO</span>
+                    <span>6 artículos</span>
+                </button>
+                <button type="button" class="categoria" data-categoria="equipos-qr" aria-pressed="false">
+                    <span class="categoria-icono"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M2.5 2.5H8.33333V8.33333H2.5V2.5ZM11.6667 2.5H17.5V8.33333H11.6667V2.5ZM2.5 11.6667H8.33333V17.5H2.5V11.6667ZM11.6667 11.6667H14.1667V14.1667H17.5V17.5H11.6667V11.6667Z"/></svg></span>
+                    <span class="categoria-flecha"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A"><path d="M3.54199 8.50001H13.4587M9.91699 12.0417L13.4587 8.50001L9.91699 4.95834"/></svg></span>
+                    <strong>Equipos y QR</strong>
+                    <span>Activos e identificación</span>
+                    <span>12 artículos</span>
+                </button>
+                <button type="button" class="categoria" data-categoria="ordenes" aria-pressed="false">
+                    <span class="categoria-icono"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M5.83366 3.33333H14.167C15.0875 3.33333 15.8337 4.07952 15.8337 4.99999V15.8333C15.8337 16.7538 15.0875 17.5 14.167 17.5H5.83366C4.91318 17.5 4.16699 16.7538 4.16699 15.8333V4.99999C4.16699 4.07952 4.91318 3.33333 5.83366 3.33333Z"/><path d="M7.5 10H12.5M7.5 13.3333H10.8333M7.5 2.5H12.5V5.83333H7.5V2.5Z"/></svg></span>
+                    <span class="categoria-flecha"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A"><path d="M3.54199 8.50001H13.4587M9.91699 12.0417L13.4587 8.50001L9.91699 4.95834"/></svg></span>
+                    <strong>Órdenes de trabajo</strong>
+                    <span>Planifica y da seguimiento</span>
+                    <span>9 artículos</span>
+                </button>
+                <button type="button" class="categoria" data-categoria="reportes" aria-pressed="false">
+                    <span class="categoria-icono"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M3.33301 2.5V17.5H17.4997M6.66634 13.3333V9.16667M10.833 13.3333V5M14.9997 13.3333V7.5"/></svg></span>
+                    <span class="categoria-flecha"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A"><path d="M3.54199 8.50001H13.4587M9.91699 12.0417L13.4587 8.50001L9.91699 4.95834"/></svg></span>
+                    <strong>Reportes</strong>
+                    <span>Indicadores de tu planta</span>
+                    <span>5 artículos</span>
+                </button>
+                <button type="button" class="categoria" data-categoria="usuarios" aria-pressed="false">
+                    <span class="categoria-icono"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M10 6.66666C10 8.04737 8.88071 9.16666 7.5 9.16666C6.11929 9.16666 5 8.04737 5 6.66666C5 5.28594 6.11929 4.16666 7.5 4.16666C8.88071 4.16666 10 5.28594 10 6.66666Z"/><path d="M2.5 17.5V15C2.5 13.6739 3.02678 12.4021 3.96447 11.4645C4.90215 10.5268 6.17392 9.99999 7.5 9.99999C8.82608 9.99999 10.0979 10.5268 11.0355 11.4645C11.9732 12.4021 12.5 13.6739 12.5 15V17.5M13.3333 4.16666C13.9964 4.16666 14.6323 4.43005 15.1011 4.89889C15.5699 5.36773 15.8333 6.00362 15.8333 6.66666C15.8333 7.3297 15.5699 7.96558 15.1011 8.43442C14.6323 8.90326 13.9964 9.16666 13.3333 9.16666M15 11.6667C15.8002 12.0124 16.4718 12.6004 16.9203 13.3478C17.3687 14.0953 17.5715 14.9646 17.5 15.8333V17.5"/></svg></span>
+                    <span class="categoria-flecha"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#53666A"><path d="M3.54199 8.50001H13.4587M9.91699 12.0417L13.4587 8.50001L9.91699 4.95834"/></svg></span>
+                    <strong>Usuarios</strong>
+                    <span>Accesos y permisos</span>
+                    <span>4 artículos</span>
+                </button>
+            </section>
+
+            <div class="ayuda-layout">
+                <section class="faq" aria-labelledby="titulo-faq">
+                    <div class="faq-encabezado">
+                        <div>
+                            <h3 id="titulo-faq">Preguntas frecuentes</h3>
+                            <p id="subtitulo-faq">Respuestas rápidas a las dudas de tu equipo.</p>
+                        </div>
+                        <button type="button" class="btn-ver-todos" id="ver-todos" aria-expanded="false">Ver todos los artículos</button>
+                    </div>
+
+                    <div class="filtro-activo" id="filtro-activo" hidden>
+                        <span id="texto-filtro-activo"></span>
+                        <button type="button" id="quitar-filtro">Quitar filtros</button>
+                    </div>
+
+                    <div class="acordeon" id="acordeon">
+                        <article class="faq-item" data-categoria="equipos-qr" data-principal data-claves="alta activo inventario codigo qr supervisor ficha identificador">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="true" aria-controls="respuesta-1">¿Cómo registro un nuevo equipo?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-1">
+                                <p>Ve a Equipos y selecciona «Registrar equipo». Completa el nombre, la ubicación y la criticidad del activo. Al guardar, su código QR se genera automáticamente.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="equipos-qr" data-principal data-claves="etiqueta imprimir impresion pdf codigos qr a6 a4 descargar">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-2">¿Cómo descargo e imprimo las etiquetas QR?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-2" hidden>
+                                <p>Ve a Códigos QR, elige la zona y el formato, y marca las etiquetas que necesites. Luego selecciona «Descargar» o «Imprimir» y, en el cuadro de impresión, elige «Guardar como PDF» si prefieres un archivo. Imprime al 100 % para conservar la lectura del QR.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="ordenes" data-principal data-claves="crear orden de trabajo asignar reasignar tecnico especialidad supervisor">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-3">¿Puedo asignar una orden de trabajo a otro técnico?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-3" hidden>
+                                <p>Sí. El supervisor puede asignar o reasignar una orden a otro técnico, siempre que este cuente con la especialidad requerida (eléctrica, mecánica, hidráulica u otra). El técnico la ve de inmediato en su teléfono.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="equipos-qr" data-principal data-claves="historial fallas intervenciones repuestos escanear ficha consultar">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-4">¿Dónde consulto el historial de mantenimiento de un equipo?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-4" hidden>
+                                <p>Escanea el código QR del equipo desde la aplicación móvil para ver su ficha y sus fallas anteriores. También puedes buscar el equipo en Órdenes de trabajo para revisar sus intervenciones.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="primeros-pasos" data-claves="ingresar acceso sesion contrasena correo rol tecnico supervisor produccion">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-5">¿Cómo inicio sesión en MANTTO?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-5" hidden>
+                                <p>Ingresa con tu correo corporativo y tu contraseña. Lo que ves en el sistema depende de tu rol: técnico, supervisor o personal de producción.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="reportes" data-claves="exportar descargar pdf indicadores periodo informe">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-6">¿Cómo exporto un reporte?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-6" hidden>
+                                <p>En Reportes, ajusta el período y la planta, y selecciona «Exportar» o «Descargar PDF». Los datos incluidos corresponden al alcance mostrado en pantalla.</p>
+                            </div>
+                        </article>
+                        <article class="faq-item" data-categoria="usuarios" data-claves="roles permisos accesos configuracion invitar usuario tecnico supervisor operario">
+                            <h4><button type="button" class="faq-pregunta" aria-expanded="false" aria-controls="respuesta-7">¿Cómo cambio los permisos de un rol?<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7.5L9 10.5L12 7.5"/></svg></button></h4>
+                            <div class="faq-respuesta" id="respuesta-7" hidden>
+                                <p>En Configuración, abre «Roles y permisos», elige el perfil, activa o desactiva cada permiso y guarda. Los cambios se aplican a todos los usuarios de ese rol.</p>
+                            </div>
+                        </article>
+                        <p class="sin-resultados" id="sin-resultados" hidden>No encontramos resultados. Prueba con otras palabras o contacta a soporte.</p>
+                    </div>
+                </section>
+
+                <aside class="soporte" aria-labelledby="titulo-soporte">
+                    <div class="soporte-icono"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#D5F66A"><path d="M6.70866 9.58332H16.292M6.70866 13.4167H12.4587M20.1253 10.5417C20.1253 12.575 19.3176 14.525 17.8798 15.9628C16.442 17.4006 14.492 18.2083 12.4587 18.2083H6.70866L1.91699 21.0833L3.83366 15.3333C3.18477 14.1612 2.85435 12.8395 2.87533 11.5C2.74824 9.21249 3.53507 6.96821 5.06271 5.26085C6.59035 3.55348 8.73367 2.5229 11.0212 2.39582C13.3087 2.26874 15.5529 3.05556 17.2603 4.5832C18.9677 6.11084 19.9982 8.25416 20.1253 10.5417Z"/></svg></div>
+                    <h3 id="titulo-soporte">¿Necesitas soporte?</h3>
+                    <p>Estoy aquí para ayudarte a resolver cualquier duda de tu operación.</p>
+                    <p class="soporte-horario"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#C7D7D1"><path d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8Z"/><path d="M8 4.66669V8.00002L10 9.33335"/></svg><span>Lunes a viernes · 08:00 a 18:00</span></p>
+                    <!-- Reemplazar la dirección por el correo real de soporte -->
+                    <a class="btn btn-primary btn-soporte" id="contactar-soporte" href="mailto:soporte@example.com?subject=Consulta%20de%20soporte%20MANTTO">Contactar soporte<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" stroke="#142C32"><path d="M3.75 9H14.25M10.5 12.75L14.25 9L10.5 5.25"/></svg></a>
+                    <p class="soporte-tiempo">Tiempo de respuesta habitual: menos de 2 h</p>
+                </aside>
+            </div>
+
+            <footer class="page-footer">
+                <span>AYUDA PARA UNA OPERACIÓN CONTINUA</span>
+                <span class="actualizado">Versión de la guía · 2026</span>
+            </footer>
+        </main>
+
+    </div>
+    <script src="CentroAyuda.js"></script>
+</body>
+</html>

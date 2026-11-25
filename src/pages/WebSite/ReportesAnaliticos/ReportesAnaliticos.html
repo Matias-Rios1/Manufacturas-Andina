@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes Analíticos - MANTTO</title>
+    <link rel="stylesheet" href="ReportesAnaliticos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="brand">MANTTO</h1>
+                <span class="subtitle">SUPERVISIÓN INDUSTRIAL</span>
+            </div>
+            
+            <div class="workspace-selector">
+                <span class="label">ESPACIO DE TRABAJO</span>
+                <select class="plant-select">
+                    <option>Planta Norte</option>
+                </select>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <span class="nav-section-title">OPERACIÓN</span>
+                <a href="#" class="nav-item"><span class="icon">📊</span> Dashboard</a>
+                <a href="#" class="nav-item"><span class="icon">⚙️</span> Equipos</a>
+                <a href="#" class="nav-item"><span class="icon">📋</span> Órdenes de trabajo <span class="badge">24</span></a>
+                <a href="#" class="nav-item"><span class="icon">📦</span> Inventario</a>
+                <a href="#" class="nav-item"><span class="icon">🔲</span> Códigos QR</a>
+                <a href="#" class="nav-item active"><span class="icon">📈</span> Reportes</a>
+                
+                <hr class="nav-divider">
+                
+                <span class="nav-section-title">ADMINISTRACIÓN</span>
+                <a href="#" class="nav-item"><span class="icon">⚙️</span> Configuración</a>
+                <a href="#" class="nav-item"><span class="icon">❓</span> Centro de ayuda</a>
+            </nav>
+            
+            <div class="connection-status">
+                <div class="status-indicator">
+                    <span class="icon check">✔️</span>
+                    <span class="status-text">Sistema conectado</span>
+                </div>
+                <span class="sync-time">Última sincronización · 09:41</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="breadcrumb">
+                    <span class="path">Operación / </span>
+                    <span class="current">Reportes</span>
+                </div>
+                
+                <div class="search-bar">
+                    <span class="icon">🔍</span>
+                    <input type="text" placeholder="Buscar equipo, orden o repuesto...">
+                </div>
+                
+                <div class="user-profile">
+                    <button class="notification-btn">🔔<span class="notification-dot"></span></button>
+                    <div class="divider"></div>
+                    <div class="user-info">
+                        <span class="user-name">María González</span>
+                        <span class="user-role">Supervisora de mantenimiento</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Area -->
+            <section class="dashboard-area">
+                <div class="page-header">
+                    <div>
+                        <h2 class="page-title">Reportes analíticos</h2>
+                        <p class="page-subtitle">Evalúa el desempeño de mantenimiento y detecta oportunidades de mejora.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button class="btn btn-outline">📥 Exportar</button>
+                        <button class="btn btn-primary">📄 Descargar PDF</button>
+                    </div>
+                </div>
+
+                <!-- KPI Grid -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Disponibilidad de equipos</span>
+                            <div class="kpi-icon">📈</div>
+                        </div>
+                        <div class="kpi-value">90,6 %</div>
+                        <div class="kpi-detail">116 de 128 equipos operativos</div>
+                        <div class="kpi-trend positive">+2,3 pp vs. mes anterior</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Tiempo medio de resolución</span>
+                            <div class="kpi-icon">⏱️</div>
+                        </div>
+                        <div class="kpi-value">4,2 h</div>
+                        <div class="kpi-detail">MTTR · Correctivas cerradas</div>
+                        <div class="kpi-trend positive">−18 % vs. período anterior</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Cumplimiento preventivo</span>
+                            <div class="kpi-icon">✅</div>
+                        </div>
+                        <div class="kpi-value">92 %</div>
+                        <div class="kpi-detail">46 de 50 completadas</div>
+                        <div class="kpi-trend neutral">Meta: 95 % · Brecha de 3 pp</div>
+                    </div>
+                    
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Fallas recurrentes</span>
+                            <div class="kpi-icon">⚠️</div>
+                        </div>
+                        <div class="kpi-value">24</div>
+                        <div class="kpi-detail">De 60 fallas registradas · 40 %</div>
+                        <div class="kpi-trend negative">3 equipos concentran 17 casos</div>
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div class="report-content">
+                    <div class="filters-bar">
+                        <div class="filter-group">
+                            <span class="filter-title">Alcance del reporte</span>
+                            <span class="filter-subtitle">Datos actualizados · 13 nov 2026, 09:41</span>
+                        </div>
+                        <div class="filter-controls">
+                            <select class="filter-select"><option>Planta Norte</option></select>
+                            <select class="filter-select"><option>📅 01 nov – 13 nov 2026</option></select>
+                            <button class="btn btn-dark">Actualizar</button>
+                        </div>
+                    </div>
+
+                    <div class="charts-grid">
+                        <!-- Card 1 -->
+                        <div class="chart-card large">
+                            <h3>Tiempo de resolución por especialidad</h3>
+                            <p class="subtitle">MTTR · Órdenes correctivas cerradas</p>
+                            <div class="chart-placeholder">
+                                <!-- Visual placeholder for the bar chart -->
+                                <div class="bar-group"><div class="bar bg-dark" style="height: 80%"></div><div class="bar bg-light" style="height: 90%"></div><span>Mecánica</span></div>
+                                <div class="bar-group"><div class="bar bg-dark" style="height: 60%"></div><div class="bar bg-light" style="height: 70%"></div><span>Eléctrica</span></div>
+                                <div class="bar-group"><div class="bar bg-dark" style="height: 70%"></div><div class="bar bg-light" style="height: 80%"></div><span>Neumática</span></div>
+                                <div class="bar-group"><div class="bar bg-dark" style="height: 75%"></div><div class="bar bg-light" style="height: 85%"></div><span>Automatización</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="chart-card">
+                            <h3>Fallas recurrentes por causa</h3>
+                            <p class="subtitle">24 casos recurrentes de 60 fallas registradas</p>
+                            <div class="progress-list">
+                                <div class="progress-item">
+                                    <div class="progress-labels"><span>Desgaste mecánico</span><span>9 · 38 %</span></div>
+                                    <div class="progress-track"><div class="progress-fill" style="width: 38%"></div></div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="progress-labels"><span>Fugas hidráulicas</span><span>7 · 29 %</span></div>
+                                    <div class="progress-track"><div class="progress-fill bg-green" style="width: 29%"></div></div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="progress-labels"><span>Falla eléctrica</span><span>5 · 21 %</span></div>
+                                    <div class="progress-track"><div class="progress-fill bg-green" style="width: 21%"></div></div>
+                                </div>
+                                <div class="progress-item">
+                                    <div class="progress-labels"><span>Desajuste de sensores</span><span>3 · 12 %</span></div>
+                                    <div class="progress-track"><div class="progress-fill bg-green" style="width: 12%"></div></div>
+                                </div>
+                            </div>
+                            <div class="conclusion-box">
+                                Mecánica e hidráulica concentran 16 de 24 casos (67 %).
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="chart-card large">
+                            <h3>Rendimiento por técnico</h3>
+                            <p class="subtitle">Órdenes completadas en el período</p>
+                            <table class="data-table">
+                                <thead>
+                                    <tr><th>TÉCNICO</th><th>COMPLETADAS</th><th>MTTR</th><th>DENTRO DEL PLAZO</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Carlos Méndez</td><td>32</td><td>4,1 h</td><td class="text-green">94 %</td></tr>
+                                    <tr><td>Ana Torres</td><td>28</td><td>3,8 h</td><td class="text-green">96 %</td></tr>
+                                    <tr><td>Luis Herrera</td><td>24</td><td>4,6 h</td><td class="text-green">92 %</td></tr>
+                                    <tr><td>Pedro Rojas</td><td>20</td><td>4,4 h</td><td class="text-green">95 %</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="chart-card">
+                            <h3>Equipos con mayor recurrencia</h3>
+                            <p class="subtitle">3 equipos concentran 17 de los 24 casos</p>
+                            <table class="data-table">
+                                <thead>
+                                    <tr><th>EQUIPO</th><th>CASOS</th><th>ACCIÓN</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Bomba centrífuga B-04</td><td>7</td><td><a href="#" class="link">Ver historial</a></td></tr>
+                                    <tr><td>Compresor C-12</td><td>6</td><td><a href="#" class="link">Ver historial</a></td></tr>
+                                    <tr><td>Motor eléctrico M-08</td><td>4</td><td><a href="#" class="link">Ver historial</a></td></tr>
+                                </tbody>
+                            </table>
+                            <p class="footer-note">Prioriza una revisión de causa raíz en estos equipos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="ReportesAnaliticos.js"></script>
+</body>
+</html>

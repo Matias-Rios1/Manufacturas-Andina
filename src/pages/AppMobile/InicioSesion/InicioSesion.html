@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANTTO - Iniciar sesión</title>
+    <link rel="stylesheet" href="InicioSesion.css">
+</head>
+<body>
+    <main class="login-container">
+        <header class="login-header">
+            <div class="status-bar">
+                <span class="time">9:41</span>
+                <span class="network">5G ▰</span>
+            </div>
+            <div class="branding">
+                <h1 class="logo">MANTTO</h1>
+                <span class="subtitle">OPERACIÓN EN TERRENO</span>
+                <div class="accent-line"></div>
+            </div>
+            <div class="header-text">
+                <h2>Todo en orden.<br>Siempre en marcha.</h2>
+                <p>Tu mantenimiento, donde lo necesitas.</p>
+            </div>
+        </header>
+
+        <section class="login-form-section">
+            <div class="form-header">
+                <h3>Inicia tu turno</h3>
+                <p>Ingresa con tu cuenta de la empresa.</p>
+            </div>
+
+            <form class="login-form" action="#" method="POST">
+                <div class="input-group">
+                    <label for="email">Correo corporativo</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@empresa.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" placeholder="••••••••••" required>
+                        <button type="button" class="toggle-password" aria-label="Mostrar contraseña">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 12C2 12 5 5 12 5C19 5 22 12 22 12C22 12 19 19 12 19C5 19 2 12 2 12Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#142C32"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">
+                        Ingresar
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M13 18L19 12L13 6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#D5F66A"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+
+            <div class="secure-access">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.25 7.5H12.75C13.5784 7.5 14.25 8.17157 14.25 9V14.25C14.25 15.0784 13.5784 15.75 12.75 15.75H5.25C4.42157 15.75 3.75 15.0784 3.75 14.25V9C3.75 8.17157 4.42157 7.5 5.25 7.5Z" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                    <path d="M6 7.5V5.25C6 4.45435 6.31607 3.69129 6.87868 3.12868C7.44129 2.56607 8.20435 2.25 9 2.25C9.79565 2.25 10.5587 2.56607 11.1213 3.12868C11.6839 3.69129 12 4.45435 12 5.25V7.5M9 11.25V12.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" stroke="#53666A"/>
+                </svg>
+                <span>Acceso seguro de tu organización</span>
+            </div>
+        </section>
+        <div class="home-indicator"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANTTO - Inicio</title>
+    <!-- Ruta ajustada a la carpeta public/ y respetando la mayúscula de Styles -->
+    <!-- <link rel="stylesheet" href="../src/Styles/global.css"> -->
+    <style>
+        :root {
+            --primary-dark: #142C32;
+            --bg-light: #F3F5F2;
+            --text-dark: #142C32;
+            --accent-lime: #D5F66A;
+            --border-subtle: #DCE2DD;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .container {
+            text-align: center;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(20, 44, 50, 0.08);
+            max-width: 560px;
+            width: 100%;
+        }
+        .brand {
+            color: var(--primary-dark);
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            margin: 0 0 28px 0;
+            font-size: 16px;
+            opacity: 0.85;
+        }
+        .primary-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background-color: var(--accent-lime);
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+        .btn-secondary {
+            background-color: var(--primary-dark);
+            color: #FFFFFF;
+        }
+        .btn:hover {
+            opacity: 0.88;
+        }
+        .modules-nav {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 20px;
+        }
+        .modules-group + .modules-group {
+            margin-top: 22px;
+        }
+        .modules-title {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 12px 0;
+            opacity: 0.7;
+        }
+        .modules-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        .module-link {
+            font-size: 14px;
+            color: var(--primary-dark);
+            text-decoration: none;
+            padding: 6px 12px;
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            background-color: var(--bg-light);
+            transition: background-color 0.2s;
+        }
+        .module-link:hover {
+            background-color: var(--accent-lime);
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="brand">MANTTO</div>
+            <p class="subtitle">Bienvenido al Sistema de Supervisión Industrial</p>
+        </header>
+
+        <div class="primary-actions">
+            <a href="../src/pages/AppMobile/InicioSesion/InicioSesion.html" class="btn">Iniciar Sesión</a>
+            <a href="../src/pages/WebSite/Dashboard/Dashboard.html" class="btn btn-secondary">Ir al Dashboard</a>
+        </div>
+
+        <nav class="modules-nav" aria-label="Accesos directos a vistas del sistema">
+            <div class="modules-group">
+                <p class="modules-title">Aplicación móvil</p>
+                <div class="modules-list">
+                    <a href="../src/pages/AppMobile/inicio/inicio.html" class="module-link">Inicio Técnico</a>
+                    <a href="../src/pages/AppMobile/Ordenes-Trabajo/OrdenTrabajo.html" class="module-link">Órdenes de Trabajo</a>
+                    <a href="../src/pages/AppMobile/ReportarFallas/ReportarFallas.html" class="module-link">Reportar Fallas</a>
+                </div>
+            </div>
+
+            <div class="modules-group">
+                <p class="modules-title">Sitio web de supervisión</p>
+                <div class="modules-list">
+                    <a href="../src/pages/WebSite/Equipos/Equipos.html" class="module-link">Equipos</a>
+                    <a href="../src/pages/WebSite/OrdenTrabajo/OrdenTrabajo.html" class="module-link">Historial de Órdenes</a>
+                    <a href="../src/pages/WebSite/Inventario/Inventario.html" class="module-link">Inventario</a>
+                    <a href="../src/pages/WebSite/CodigoQR/CodigoQR.html" class="module-link">Códigos QR</a>
+                    <a href="../src/pages/WebSite/ReportesAnaliticos/ReportesAnaliticos.html" class="module-link">Reportes Analíticos</a>
+                    <a href="../src/pages/WebSite/ConfUsers/ConfUsers.html" class="module-link">Configuración de Usuarios</a>
+                    <a href="../src/pages/WebSite/CentroAyuda/CentroAyuda.html" class="module-link">Centro de Ayuda</a>
+                </div>
+            </div>
+        </nav>
+    </main>
+</body>
+</html>
