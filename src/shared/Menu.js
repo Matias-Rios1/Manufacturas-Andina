@@ -68,17 +68,20 @@
   }
 
   function montar() {
-    const estilo = document.createElement('style');
-    estilo.textContent = ESTILO;
-    document.head.appendChild(estilo);
+  const estilo = document.createElement('style');
+  estilo.textContent = ESTILO + `
+    body { display: flex !important; align-items: stretch; min-height: 100vh; margin: 0; }
+    body > :not(.mt-sidebar) { flex: 1; min-width: 0; }
+  `;
+  document.head.appendChild(estilo);
 
-    // Quita el menú antiguo de cada página (<aside> o .sidebar).
-    document.querySelectorAll('aside, .sidebar').forEach(function (viejo) { viejo.remove(); });
+  // Solo quita el menú antiguo: <aside> hijo directo de body (Dashboard) o elementos .sidebar.
+  document.querySelectorAll('body > aside, .sidebar').forEach(function (viejo) { viejo.remove(); });
 
-    const contenedor = document.createElement('div');
-    contenedor.innerHTML = construirMenu();
-    document.body.insertBefore(contenedor.firstElementChild, document.body.firstChild);
-  }
+  const contenedor = document.createElement('div');
+  contenedor.innerHTML = construirMenu();
+  document.body.insertBefore(contenedor.firstElementChild, document.body.firstChild);
+}
 
   // Expuesto para que las páginas puedan mostrar el usuario con sesión.
   window.manttoMenu = { montar: montar };
