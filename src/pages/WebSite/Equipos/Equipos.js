@@ -327,9 +327,11 @@
 
     const totalEstado = filtroEstado === 'todos' ? conteos.total : conteos[filtroEstado];
     elementos.resumen.textContent = 'Mostrando ' + visibles.length + ' de ' + Math.max(totalEstado, filtrados.length) + ' equipos';
-    dibujarPaginacion(elementos.paginacion, paginaActual, totalPaginas, function (pagina) {
-      paginaActual = pagina;
-      dibujarTabla();
+    
+    document.addEventListener('DOMContentLoaded', async function () {
+      await window.mantto.datos.exigirSesion();
+      const equipos = await window.mantto.datos.listarEquipos();
+      // Pasa `equipos` a la tabla en lugar del arreglo fijo.
     });
   }
 
