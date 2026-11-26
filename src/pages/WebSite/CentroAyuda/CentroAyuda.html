@@ -10,45 +10,7 @@
     <link rel="stylesheet" href="CentroAyuda.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="brand">
-            <h1>MANTTO</h1>
-            <span class="subtitle">SUPERVISIÓN INDUSTRIAL</span>
-        </div>
-        <div class="workspace-selector">
-            <label class="label" for="selector-planta">ESPACIO DE TRABAJO</label>
-            <select id="selector-planta">
-                <option value="planta-norte">Planta Norte</option>
-            </select>
-        </div>
-
-        <div class="menu-group">
-            <span class="menu-title">OPERACIÓN</span>
-            <nav class="nav-menu" aria-label="Operación">
-                <a href="../Dashboard/Dashboard.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33333 2.5H7.5C7.96024 2.5 8.33333 2.8731 8.33333 3.33333V7.5C8.33333 7.96024 7.96024 8.33333 7.5 8.33333H3.33333C2.8731 8.33333 2.5 7.96024 2.5 7.5V3.33333C2.5 2.8731 2.8731 2.5 3.33333 2.5Z"/><path d="M12.5003 2.5H16.667C17.1272 2.5 17.5003 2.8731 17.5003 3.33333V7.5C17.5003 7.96024 17.1272 8.33333 16.667 8.33333H12.5003C12.0401 8.33333 11.667 7.96024 11.667 7.5V3.33333C11.667 2.8731 12.0401 2.5 12.5003 2.5Z"/><path d="M3.33333 11.6667H7.5C7.96024 11.6667 8.33333 12.0398 8.33333 12.5V16.6667C8.33333 17.1269 7.96024 17.5 7.5 17.5H3.33333C2.8731 17.5 2.5 17.1269 2.5 16.6667V12.5C2.5 12.0398 2.8731 11.6667 3.33333 11.6667Z"/><path d="M12.5003 11.6667H16.667C17.1272 11.6667 17.5003 12.0398 17.5003 12.5V16.6667C17.5003 17.1269 17.1272 17.5 16.667 17.5H12.5003C12.0401 17.5 11.667 17.1269 11.667 16.6667V12.5C11.667 12.0398 12.0401 11.6667 12.5003 11.6667Z"/></svg><span>Dashboard</span></a>
-                <a href="../Equipos/Equipos.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.16667 5H15.8333C16.7538 5 17.5 5.74619 17.5 6.66667V15C17.5 15.9205 16.7538 16.6667 15.8333 16.6667H4.16667C3.24619 16.6667 2.5 15.9205 2.5 15V6.66667C2.5 5.74619 3.24619 5 4.16667 5Z"/><path d="M6.66667 5V2.5H13.3333V5M2.5 10H7.5M7.5 10H12.5M7.5 10V8.33333M7.5 10V11.6667M12.5 10H17.5M12.5 10V8.33333M12.5 10V11.6667"/></svg><span>Equipos</span></a>
-                <a href="../OrdenTrabajo/OrdenTrabajo.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.83366 3.33333H14.167C15.0875 3.33333 15.8337 4.07952 15.8337 4.99999V15.8333C15.8337 16.7538 15.0875 17.5 14.167 17.5H5.83366C4.91318 17.5 4.16699 16.7538 4.16699 15.8333V4.99999C4.16699 4.07952 4.91318 3.33333 5.83366 3.33333Z"/><path d="M7.5 10H12.5M7.5 13.3333H10.8333M7.5 2.5H12.5V5.83333H7.5V2.5Z"/></svg><span>Órdenes de trabajo</span><span class="badge">24</span></a>
-                <a href="../Inventario/Inventario.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.05263 4.25439L10 2.5L17.5 5.83333V15L10 18.3333L2.5 15V5.83333L6.05263 4.25439ZM2.5 5.83333L10 9.16667M6.05263 4.25439L5.83333 4.16667M6.05263 4.25439L13.9474 7.41228M17.5 5.83333L13.9474 7.41228M10 18.3333V9.16667M10 9.16667L13.9474 7.41228M13.9474 7.41228L14.1667 7.5"/></svg><span>Inventario</span></a>
-                <a href="../CodigoQR/CodigoQR.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 2.5H8.33333V8.33333H2.5V2.5ZM11.6667 2.5H17.5V8.33333H11.6667V2.5ZM2.5 11.6667H8.33333V17.5H2.5V11.6667ZM11.6667 11.6667H14.1667V14.1667H17.5V17.5H11.6667V11.6667Z"/></svg><span>Códigos QR</span></a>
-                <a href="../ReportesAnaliticos/ReportesAnaliticos.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.33301 2.5V17.5H17.4997M6.66634 13.3333V9.16667M10.833 13.3333V5M14.9997 13.3333V7.5"/></svg><span>Reportes</span></a>
-            </nav>
-        </div>
-
-        <hr class="menu-divider">
-
-        <div class="menu-group">
-            <span class="menu-title">ADMINISTRACIÓN</span>
-            <nav class="nav-menu" aria-label="Administración">
-                <a href="../ConfUsers/ConfUsers.html" class="nav-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.5 2.5L6.66667 5L4.16667 5.83333L2.5 10L4.16667 14.1667L6.66667 15L7.5 17.5H12.5L13.3333 15L15.8333 14.1667L17.5 10L15.8333 5.83333L13.3333 5L12.5 2.5H7.5Z"/><path d="M12.5 10C12.5 11.3807 11.3807 12.5 10 12.5C8.61929 12.5 7.5 11.3807 7.5 10C7.5 8.61929 8.61929 7.5 10 7.5C11.3807 7.5 12.5 8.61929 12.5 10Z"/></svg><span>Configuración</span></a>
-                <a href="../CentroAyuda/CentroAyuda.html" class="nav-item active" aria-current="page"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z"/><path d="M7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 9.16667 10 9.16667 10 11.6667M10 14.1667V14.25"/></svg><span>Centro de ayuda</span></a>
-            </nav>
-        </div>
-
-        <div class="connection-status">
-            <span class="status-title"><span class="dot"></span>Sistema conectado · <span data-hora>09:41</span></span>
-            <span class="status-detail">Todos los servicios operativos</span>
-        </div>
-    </aside>
+    <script src="/src/shared/menu.js" defer></script>
 
     <div class="main-wrapper">
         <header class="topbar">
